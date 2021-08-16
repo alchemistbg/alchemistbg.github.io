@@ -35,8 +35,10 @@ gulp.task('watch', function () {
     gulp.watch('_assets/scss/**/*.scss', gulp.series('scss'));
 
     gulp.watch([
+        './*.html',
         "./_layouts/*.html",
-        './*.html'
+        "./_includes/*.html",
+        "./scripts/*.js",
     ]).on('change', gulp.series('jekylldev', 'scss'));
 
     // gulp.watch( 'docs/**/*.html' ).on('change', browserSync.reload );
