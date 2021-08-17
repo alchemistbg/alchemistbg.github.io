@@ -17,7 +17,7 @@ gulp.task('scss', function () {
 
 // Jekyll Development
 gulp.task('jekylldev', function () {
-    return childProcess.spawn('bundle', ['exec', 'jekyll', 'build'], { stdio: 'inherit', shell: true });
+    return childProcess.spawn('bundle', ['exec', 'jekyll', 'build --baseurl /'], { stdio: 'inherit', shell: true });
 });
 
 // Jekyll Production
