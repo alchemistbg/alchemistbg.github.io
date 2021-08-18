@@ -1,0 +1,130 @@
+.navbar {
+    // border: 2px solid green;
+    position: fixed;
+    width: 100%;
+    padding: 2em 0;
+    font-family: $font-family-header;
+    z-index: 999;
+    transition: all 0.3s ease;
+
+    &.sticky {
+        padding: 1em 0;
+        background-color: $color-red;
+    }
+
+    .container {
+        // border: 2px solid yellow;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        a {
+            font-size: 2em;
+            font-weight: $font-weight-semiBold;
+            color: $color-white;
+            // text-decoration: underline 0.05em rgba(255, 255, 255, 0);
+            // text-underline-offset: 0.1em;
+            // transition: text-decoration-color 300ms, text-underline-offset 300ms;
+
+            // &:hover {
+            //     text-decoration-color: rgba(255, 255, 255, 1);
+            //     text-underline-offset: 0.3em;
+            // }
+
+            span {
+                color: $color-red;
+                transition: $transition-all;
+            }
+        }
+    }
+
+    &.sticky .logo a,
+    &.sticky .logo a span {
+        color: $color-white;
+        transition: $transition-all;
+    }
+
+    &.sticky .logo a:hover,
+    &.sticky .logo a:hover span {
+        // color: $color-darkBlue;
+    }
+
+    .menu {
+        li {
+            list-style: none;
+            display: inline-block;
+
+            a {
+                display: block;
+                color: $color-white;
+                font-size: 1.2em;
+                font-weight: $font-weight-medium;
+                margin-left: 1.5em;
+                transition: $transition-all;
+
+                &:hover {
+                    color: $color-red;
+                }
+            }
+        }
+    }
+
+    &.sticky .menu li a:hover {
+        color: $color-white;
+        // color: $color-lightBlue;
+    }
+
+    .hamburger,
+    .hamburger-item {
+        color: $color-white;
+        font-size: 1.5em;
+        cursor: pointer;
+        display: none;
+    }
+
+    @media (max-width: 1024px) {
+        .menu {
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            top: 0;
+            left: -100%;
+            background-color: #000;
+            text-align: center;
+            padding-top: 80px;
+            transition: $transition-all;
+
+            &.active {
+                left: 0
+            }
+
+            li {
+                display: block;
+
+                a {
+                    display: inline-block;
+                    margin: 20px 0;
+                    font-size: 2em;
+                }
+            }
+        }
+
+        .hamburger {
+            display: block;
+            z-index: 999;
+
+            &:after {
+                content: '\f0c9';
+                font-family: 'Font Awesome 5 Free';
+                font-weight: bold;
+                color: $color-white;
+            }
+
+            &.active:after {
+                content: '\f00d'
+            }
+        }
+    }
+}
