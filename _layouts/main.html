@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='shortcut icon' type='image/x-icon' href='{{ site.baseurl }}images/favicon.ico' />
+
+    <link rel="stylesheet" href="{{ site.baseurl }}css/styles.css">
+
+    {% if page.title%}
+    <title>{{site.title}} | {{page.title}}</title>
+    {%else%}
+    <title>{{site.title}}</title>
+    {%endif%}
+
+</head>
+
+<body id="top">
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo"><a href="{{ site.baseurl }}">Al <span>Chemist</span></a></div>
+                {% include navigation.html location="header" %}
+                <div class="hamburger"></div>
+            </div>
+        </nav>
+    </header>
+
+    {{ content }}
+
+    <footer></footer>
+
+    <div id="preloader">
+        LOADING
+        <span>
+
+        </span>
+        <span>
+
+        </span>
+        <span>
+
+        </span>
+    </div>
+
+    <div class="scroll-btn-up">
+        <a href="#"><i class="icon fas fa-angle-up"></i></a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="{{ site.baseurl }}scripts/script.js" defer></script>
+
+</body>
+
+</html>
