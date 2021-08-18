@@ -1,0 +1,42 @@
+// Variables names according to Sass Code Style Guide (https://sass-lang.com/styleguide/code)
+
+// Font variables
+$font-awesome: 'Font Awesome 5 Free';
+$font-family-header: 'Ubuntu',
+sans-serif;
+$font-family-text: 'Open Sans',
+sans-serif;
+$font-lineHeight: 1.5;
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semiBold: 600;
+$font-weight-bold: 700;
+
+$font-size-small: 12px;
+$font-size-normal: 14px;
+$font-size-large: 16px;
+$font-size-huge: 18px;
+
+// Size variables
+$content--width: 65vw;
+
+// Color variables
+$color-white: #ffffff;
+$color-lightBlue: rgb(100, 175, 175);
+$color-darkBlue: rgb(1, 37, 74);
+// $color-darkBlue: rgb(6, 75, 150);
+// $color-darkBlue: rgb(0, 0, 139);
+
+$color-red: rgb(192, 15, 15);
+$color-black: rgb(0, 0, 0);
+$color-light-black:rgb(17, 17, 17);
+
+// Transition variables
+$transition-property: all;
+$transition-duration: 0.3s;
+$transition-timing: ease;
+$transition-all: $transition-property $transition-duration $transition-timing;
+
+$border-width-preloader: 0.5em;
+$border-radius: 0.3rem;
