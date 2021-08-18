@@ -1,0 +1,33 @@
+.scroll-btn-up {
+    position: fixed;
+    right: 1em;
+    bottom: 0.5em;
+    height: 1.5em;
+    width: 1.5em;
+    font-size: 2em;
+    line-height: 1.5em;
+    text-align: center;
+    color: $color-white;
+    background: $color-red;
+    border-radius: $border-radius;
+    z-index: 999;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+
+    .icon {
+        color: $color-white;
+
+        &:hover {
+            color: #ccc;
+            background-color: $color-red;
+        }
+    }
+
+    &.show {
+        pointer-events: auto;
+        opacity: 1;
+        bottom: 1em;
+    }
+}
