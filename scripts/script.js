@@ -5,6 +5,12 @@ $(document).ready(function () {
         } else {
             $('.navbar').removeClass('sticky');
         }
+
+        if (this.scrollY > 500) {
+            $('.scroll-btn-up').addClass('show');
+        } else {
+            $('.scroll-btn-up').removeClass('show');
+        }
     });
 
 });
