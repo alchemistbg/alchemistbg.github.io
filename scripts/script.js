@@ -1,4 +1,18 @@
 $(document).ready(function () {
+    console.log("Web site loaded!");
+    $(window).on('load', function () {
+        // console.log($('#preloader').length);
+        if (window.location.pathname === '/') {
+            if ($('#preloader').length > 0) {
+                $('#preloader').delay(250).fadeOut('slow', function () {
+                    $(this).remove();
+                });
+            }
+        } else {
+            $('#preloader').hide();
+        }
+    });
+
     $(window).scroll(function () {
         if (this.scrollY > 20) {
             $('.navbar').addClass('sticky');
