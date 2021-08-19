@@ -13,4 +13,9 @@ $(document).ready(function () {
         }
     });
 
+    $('.hamburger, .hamburger-item').click(function () {
+        $('.navbar .menu').toggleClass('active');
+        $('.hamburger').toggleClass('active');
+        $('.hamburger-item').toggleClass('active');
+    });
 });
