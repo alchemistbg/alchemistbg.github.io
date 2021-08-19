@@ -1,0 +1,45 @@
+.about {
+    .title {
+        &:after {
+            content: "who I am";
+            color: $color-red;
+        }
+    }
+
+    .about-content {
+        .left {
+            border: 2px solid red;
+            width: 45%;
+
+            img {
+                height: auto;
+                width: 100%;
+                object-fit: cover;
+                border-radius: $border-radius;
+            }
+        }
+
+        .right {
+            border: 2px solid green;
+            width: 55%;
+
+            .text {
+                font-size: 2em;
+                font-weight: $font-weight-semiBold;
+                margin-bottom: 1em;
+
+                .typing-2-items {
+                    display: none;
+                }
+
+                .typing-2 {
+                    color: $color-red;
+                }
+            }
+        }
+
+        p {
+            text-align: justify;
+        }
+    }
+}
