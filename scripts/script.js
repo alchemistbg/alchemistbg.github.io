@@ -18,4 +18,26 @@ $(document).ready(function () {
         $('.hamburger').toggleClass('active');
         $('.hamburger-item').toggleClass('active');
     });
+
+    if ($('.typing-1-items').length) {
+        const typing1items = $(".typing-1-items").text();
+        // console.log(typing1items);
+        const typed1 = new Typed(".typing-1", {
+            strings: typing1items.split(', '),
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true
+        });
+    }
+
+    if ($('.typing-2-items').length) {
+        const typing2items = $('.typing-2-items').text();
+        // console.log(typing2items);
+        const typed2 = new Typed('.typing-2', {
+            strings: typing2items.split(', '),
+            typeSpeed: 100,
+            backSpeed: 60,
+            loop: true
+        });
+    }
 });
