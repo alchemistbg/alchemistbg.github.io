@@ -1,0 +1,403 @@
+@import url("https://use.fontawesome.com/releases/v5.11.2/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font: 8px "Open Sans", sans-serif; }
+
+@media (min-width: 768px) {
+  html {
+    font-size: 14px; } }
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 16px; } }
+
+@media (min-width: 1600px) {
+  html {
+    font-size: v 18px; } }
+
+body,
+table,
+form,
+select,
+option,
+input,
+textarea {
+  font: inherit;
+  color: var(--color-body-text);
+  background: var(--color-body-bg); }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  font-family: "Ubuntu", sans-serif; }
+
+h1 {
+  font-size: 2.8em; }
+
+h2 {
+  font-size: 2.4em; }
+
+h3 {
+  font-size: 2.0em; }
+
+h4 {
+  font-size: 1.7em; }
+
+h5 {
+  font-size: 1.4em; }
+
+h6 {
+  font-size: 1.2em; }
+
+a {
+  text-decoration: none;
+  color: var(--color-body-text); }
+  a.text-link {
+    color: var(--color-link-main);
+    font-weight: bold; }
+  a.text-link:hover {
+    color: var(--color-link-hover); }
+
+ul {
+  list-style-type: none; }
+
+span.vip-text {
+  font-weight: bold; }
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em; }
+
+ol > li > ol > li {
+  list-style-type: lower-roman; }
+
+blockquote {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 1.5em;
+  padding-left: 4em;
+  padding-right: 4em;
+  position: relative;
+  font-family: 'PT Serif', serif;
+  background: #eee; }
+  blockquote::before, blockquote::after {
+    display: block;
+    content: '';
+    width: 38px;
+    height: 45px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+  blockquote::before {
+    background: url(../images/logos/razor_ltr.png) no-repeat;
+    background-size: cover;
+    left: 0.8em; }
+  blockquote::after {
+    background: url(../images/logos/razor_rtl.png) no-repeat;
+    background-size: cover;
+    right: 0.8em; }
+
+.quote-text {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-size: 1.2em;
+  font-style: italic; }
+
+.quote-author {
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 1em; }
+  .quote-author::before, .quote-author::after {
+    display: inline-block;
+    content: '\2014'; }
+  .quote-author::before {
+    padding-right: 0.5em; }
+  .quote-author::after {
+    padding-left: 0.5em; }
+
+html {
+  scroll-behavior: smooth; }
+
+section {
+  padding: 7em 0; }
+  section .title {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 500;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    position: relative; }
+    section .title:before {
+      position: absolute;
+      content: "";
+      bottom: 0.05em;
+      left: 50%;
+      width: 14rem;
+      height: 0.3rem;
+      background: #111111;
+      transform: translate(-50%); }
+    section .title:after {
+      position: absolute;
+      bottom: -0.9rem;
+      left: 50%;
+      font-size: 0.5em;
+      color: #c00f0f;
+      padding: 0.5rem;
+      background: #ffffff;
+      transform: translate(-50%); }
+
+.container {
+  max-width: 65vw;
+  padding: 0 5em;
+  margin: auto; }
+  @media (max-width: 1024px) {
+    .container {
+      padding: 0 3em; } }
+
+.about .about-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; }
+
+#preloader {
+  margin: auto;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  color: #ffffff;
+  background: black;
+  font-size: 4em;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #preloader.hidden {
+    display: none; }
+
+#preloader span {
+  position: fixed;
+  top: calc(50% + 1rem);
+  background-color: #c00f0f;
+  border-radius: 50%;
+  width: 0.75rem;
+  height: 0.75rem;
+  -webkit-animation: animate-preloader 1s linear infinite;
+          animation: animate-preloader 1s linear infinite; }
+  #preloader span:nth-child(1) {
+    left: calc(50% + 2.4em); }
+  #preloader span:nth-child(2) {
+    left: calc(50% + 2.7em);
+    -webkit-animation-delay: 0.2s;
+            animation-delay: 0.2s; }
+  #preloader span:nth-child(3) {
+    left: calc(50% + 3em);
+    -webkit-animation-delay: 0.4s;
+            animation-delay: 0.4s; }
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: translateY(0px); }
+  25% {
+    transform: translateY(0.75rem); }
+  50% {
+    transform: translateY(0); }
+  75% {
+    transform: translateY(-0.75rem); }
+  100% {
+    transform: translateY(0px); } }
+
+@keyframes animate-preloader {
+  0% {
+    transform: translateY(0px); }
+  25% {
+    transform: translateY(0.75rem); }
+  50% {
+    transform: translateY(0); }
+  75% {
+    transform: translateY(-0.75rem); }
+  100% {
+    transform: translateY(0px); } }
+
+.scroll-btn-up {
+  position: fixed;
+  right: 1em;
+  bottom: 0.5em;
+  height: 1.5em;
+  width: 1.5em;
+  font-size: 2em;
+  line-height: 1.5em;
+  text-align: center;
+  color: #ffffff;
+  background: #c00f0f;
+  border-radius: 0.3rem;
+  z-index: 999;
+  cursor: pointer;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.3s ease; }
+  .scroll-btn-up .icon {
+    color: #ffffff; }
+    .scroll-btn-up .icon:hover {
+      color: #ccc;
+      background-color: #c00f0f; }
+  .scroll-btn-up.show {
+    pointer-events: auto;
+    opacity: 1;
+    bottom: 1em; }
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 2em 0;
+  font-family: "Ubuntu", sans-serif;
+  z-index: 999;
+  transition: all 0.3s ease; }
+  .navbar.sticky {
+    padding: 1em 0;
+    background-color: #c00f0f; }
+  .navbar .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .navbar .logo a {
+    font-size: 2em;
+    font-weight: 600;
+    color: #ffffff; }
+    .navbar .logo a span {
+      color: #c00f0f;
+      transition: all 0.3s ease; }
+  .navbar.sticky .logo a,
+  .navbar.sticky .logo a span {
+    color: #ffffff;
+    transition: all 0.3s ease; }
+  .navbar .menu li {
+    list-style: none;
+    display: inline-block; }
+    .navbar .menu li a {
+      display: block;
+      color: #ffffff;
+      font-size: 1.2em;
+      font-weight: 500;
+      margin-left: 1.5em;
+      transition: all 0.3s ease; }
+      .navbar .menu li a:hover {
+        color: #c00f0f; }
+  .navbar.sticky .menu li a:hover {
+    color: #ffffff; }
+  .navbar .hamburger,
+  .navbar .hamburger-item {
+    color: #ffffff;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none; }
+  @media (max-width: 1024px) {
+    .navbar .menu {
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      top: 0;
+      left: -100%;
+      background-color: #000;
+      text-align: center;
+      padding-top: 80px;
+      transition: all 0.3s ease; }
+      .navbar .menu.active {
+        left: 0; }
+      .navbar .menu li {
+        display: block; }
+        .navbar .menu li a {
+          display: inline-block;
+          margin: 20px 0;
+          font-size: 2em; }
+    .navbar .hamburger {
+      display: block;
+      z-index: 999; }
+      .navbar .hamburger:after {
+        content: '\f0c9';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: bold;
+        color: #ffffff; }
+      .navbar .hamburger.active:after {
+        content: '\f00d'; } }
+
+.home {
+  display: flex;
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("/images/background.jpg") no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  min-height: 30em;
+  color: #ffffff;
+  font-family: "Ubuntu", sans-serif; }
+  .home .container {
+    margin: auto 0 auto 4em; }
+  .home .home-content .text-1 {
+    font-size: 2em; }
+  .home .home-content .text-2 {
+    font-size: 6em;
+    font-weight: 600; }
+  .home .home-content .text-3 {
+    font-size: 3em; }
+    .home .home-content .text-3 .typing-1-items {
+      display: none; }
+    .home .home-content .text-3 .typing-1 {
+      color: #c00f0f;
+      font-weight: 500; }
+
+.about .title:after {
+  content: "who I am";
+  color: #c00f0f; }
+
+.about .about-content .left {
+  border: 2px solid red;
+  width: 45%; }
+  .about .about-content .left img {
+    height: auto;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 0.3rem; }
+
+.about .about-content .right {
+  border: 2px solid green;
+  width: 55%; }
+  .about .about-content .right .text {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 1em; }
+    .about .about-content .right .text .typing-2-items {
+      display: none; }
+    .about .about-content .right .text .typing-2 {
+      color: #c00f0f; }
+
+.about .about-content p {
+  text-align: justify; }
+
+.skills .title:after {
+  content: "what i know"; }
