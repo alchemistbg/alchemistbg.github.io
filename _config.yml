@@ -48,6 +48,7 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+  - README.md
   - gulpfile.js
   - package.json
   - package-lock.json
