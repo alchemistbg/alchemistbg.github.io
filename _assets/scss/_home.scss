@@ -1,0 +1,38 @@
+.home {
+    display: flex;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('/images/background.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    min-height: 30em;
+    color: $color-white;
+    font-family: $font-family-header;
+
+    .container {
+        margin: auto 0 auto 4em;
+    }
+
+    .home-content {
+        .text-1 {
+            font-size: 2em;
+        }
+
+        .text-2 {
+            font-size: 6em;
+            font-weight: $font-weight-semiBold;
+        }
+
+        .text-3 {
+            font-size: 3em;
+
+            .typing-1-items {
+                display: none;
+            }
+
+            .typing-1 {
+                color: $color-red;
+                font-weight: $font-weight-medium;
+            }
+        }
+    }
+}
