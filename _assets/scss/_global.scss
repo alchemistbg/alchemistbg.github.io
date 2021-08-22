@@ -1,0 +1,66 @@
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 7em 0;
+
+    .title {
+        text-align: center;
+        font-size: 3em;
+        font-weight: $font-weight-medium;
+        margin-bottom: 1em;
+        padding-bottom: 0.5em;
+        position: relative;
+
+        &:before {
+            position: absolute;
+            content: "";
+            // font-size: 3em;
+            bottom: 0.05em;
+            left: 50%;
+            width: 14rem;
+            height: 0.3rem;
+            background: $color-light-black;
+            transform: translate(-50%);
+        }
+
+        &:after {
+            position: absolute;
+            bottom: -0.9rem;
+            left: 50%;
+            font-size: 0.5em;
+            color: $color-red;
+            padding: 0.2em 0.5rem;
+            background: $color-white;
+            transform: translate(-50%);
+        }
+    }
+
+}
+
+.container {
+    max-width: $content-width;
+    padding: 0 5em;
+    margin: auto;
+
+    @media(max-width: 1024px) {
+        padding: 0 3em;
+        max-width: 80vw;
+    }
+
+    @media(max-width: 768px) {
+        // padding: 0 3em;
+        max-width: 95vw;
+    }
+
+}
+
+.about .about-content,
+.skills .skills-content-summary,
+.skills .skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
