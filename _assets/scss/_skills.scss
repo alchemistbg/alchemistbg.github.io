@@ -1,0 +1,223 @@
+.skills {
+    .title:after {
+        content: "what i know";
+    }
+
+    .skills-content-summary,
+    .skills-content {
+
+        // display: flex;
+        // justify-content: space-between;
+
+        .column {
+            width: calc(50% - 2em);
+        }
+
+        .right-summary,
+        .left,
+        .right {
+            .bars {
+                margin-bottom: 1.2em;
+                width: 100%;
+            }
+
+            .info {
+                display: flex;
+                margin-bottom: 0.5em;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            span {
+                font-size: 1.5em;
+                font-weight: 500;
+            }
+
+            .line {
+                height: 0.3em;
+                width: 100%;
+                background: lightgray;
+                position: relative;
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: $color-red;
+                    height: 100%;
+                    width: 100%;
+                }
+
+                &.html:before {
+                    width: 75%;
+                }
+
+                &.css:before {
+                    width: 70%;
+                }
+
+                &.js:before {
+                    width: 65%;
+                }
+
+                &.mongo:before {
+                    width: 60%;
+                }
+
+                &.react:before {
+                    width: 60%;
+                }
+            }
+        }
+
+    }
+
+    .skills-content-summary {
+
+        .left-summary {
+            .text {
+                font-family: $font-family-header;
+                font-size: 1.5em;
+                font-weight: bold;
+                margin-bottom: 1em;
+            }
+
+            p {
+                text-align: justify;
+            }
+
+            a {
+                display: inline-block;
+                font-weight: 600;
+                margin-top: 1em;
+            }
+        }
+    }
+
+    .skills-content {
+        border: 2px solid red;
+
+        .left,
+        .right {
+            align-self: flex-start;
+
+            display: flex;
+            flex-direction: column;
+
+            .line {
+
+                &.html:before {
+                    width: 75%;
+                }
+
+                &.css:before {
+                    width: 70%;
+                }
+
+                &.sass:before {
+                    width: 60%;
+                }
+
+                &.js:before {
+                    width: 65%;
+                }
+
+                &.ts:before {
+                    width: 50%;
+                }
+
+                &.node:before {
+                    width: 60%;
+                }
+
+                &.mongo:before {
+                    width: 60%;
+                }
+
+                &.mongoose:before {
+                    width: 60%;
+                }
+
+                &.fire:before {
+                    width: 30%;
+                }
+
+                &.sql:before {
+                    width: 25%;
+                }
+
+                &.jquery:before {
+                    width: 40%;
+                }
+
+                &.react:before {
+                    width: 60%;
+                }
+
+                &.redux:before {
+                    width: 30%;
+                }
+            }
+        }
+
+        .bottom {
+            margin-top: 2em;
+            flex-basis: 100%;
+
+            display: flex;
+            justify-content: space-between;
+
+            .lang-skills,
+            .other-skills,
+            .soft-skills {
+                width: 33%;
+
+                li {
+                    margin-bottom: 0.3em;
+                }
+            }
+
+            .lang-skills {
+
+                .info {
+                    margin-bottom: 0.3em;
+                }
+
+                .info {
+                    display: flex;
+                    justify-content: space-between;
+
+                    span:nth-child(2) {
+                        font-weight: $font-weight-semiBold;
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width: 768px) {
+
+        .skills-content-summary {
+            .left-summary a {
+                margin-bottom: 2em;
+            }
+        }
+
+        .skills-content-summary .column,
+        .skills-content .column {
+            width: 100%;
+        }
+
+        .skills-content .bottom {
+            display: block;
+
+            .other-skills,
+            .soft-skills,
+            .lang-skills {
+                width: 100%;
+                margin-top: 1.5em;
+            }
+        }
+    }
+}
