@@ -30,6 +30,13 @@ github_username: alchemistbg
 # plugins:
 #   - jekyll-feed
 
+# Define sections
+# collections:
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
