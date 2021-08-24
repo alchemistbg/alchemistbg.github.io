@@ -21,7 +21,7 @@ section {
             left: 50%;
             width: 14rem;
             height: 0.3rem;
-            background: $color-light-black;
+            background: $color-black-light;
             transform: translate(-50%);
         }
 
@@ -63,4 +63,8 @@ section {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+
+    @media(max-width: 768px) {
+        display: block;
+    }
 }
