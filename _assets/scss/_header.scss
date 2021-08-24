@@ -7,13 +7,17 @@
     z-index: 999;
     transition: all 0.3s ease;
 
+    &.static {
+        // font-size: 5em;
+        transition: none;
+    }
+
     &.sticky {
         padding: 1em 0;
         background-color: $color-red;
     }
 
     .container {
-        // border: 2px solid yellow;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -24,14 +28,6 @@
             font-size: 2em;
             font-weight: $font-weight-semiBold;
             color: $color-white;
-            // text-decoration: underline 0.05em rgba(255, 255, 255, 0);
-            // text-underline-offset: 0.1em;
-            // transition: text-decoration-color 300ms, text-underline-offset 300ms;
-
-            // &:hover {
-            //     text-decoration-color: rgba(255, 255, 255, 1);
-            //     text-underline-offset: 0.3em;
-            // }
 
             span {
                 color: $color-red;
@@ -73,7 +69,6 @@
 
     &.sticky .menu li a:hover {
         color: $color-white;
-        // color: $color-lightBlue;
     }
 
     .hamburger,
