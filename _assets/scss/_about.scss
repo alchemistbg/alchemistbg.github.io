@@ -41,5 +41,17 @@
         p {
             text-align: justify;
         }
+
+        @media(max-width: 768px) {
+
+            .left,
+            .right {
+                width: 100%;
+            }
+
+            .left {
+                margin-bottom: 2em;
+            }
+        }
     }
 }
