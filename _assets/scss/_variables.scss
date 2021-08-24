@@ -22,15 +22,16 @@ $font-size-huge: 18px;
 $content-width: 65vw;
 
 // Color variables
-$color-white: #ffffff;
+$color-white: rgb(255, 255, 255);
+$color-white-alpha: rgba(255, 255, 255, 0.85);
 $color-lightBlue: rgb(100, 175, 175);
 $color-darkBlue: rgb(1, 37, 74);
 // $color-darkBlue: rgb(6, 75, 150);
 // $color-darkBlue: rgb(0, 0, 139);
 
 $color-red: rgb(192, 15, 15);
+$color-black-light:rgb(34, 34, 34);
 $color-black: rgb(0, 0, 0);
-$color-light-black:rgb(17, 17, 17);
 
 // Transition variables
 $transition-property: all;
