@@ -7,6 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel='shortcut icon' type='image/x-icon' href='/images/favicon.ico' />
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script src="/scripts/scripts.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet" href="/css/styles.css">
 
     
@@ -18,99 +26,197 @@
 <body id="top">
     <header class="header">
         
-<nav class="navbar sticky">
-    
 
-        <div class="container">
-            <div class="logo"><a href="/">Al <span>Chemist</span></a></div>
-            <ul class="menu">
-                <li><a href="/#home" class="hamburger-item">Home</a></li>
-                <li><a href="/#about" class="hamburger-item">About</a></li>
-                <li><a href="/skills" class="hamburger-item">Skills</a></li>
-                <li><a href="/projects" class="hamburger-item">Projects</a></li>
-                <li><a href="/#contacts" class="hamburger-item">Contacts</a></li>
-            </ul>
-            <div class="hamburger"></div>
-        </div>
-    </nav>
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo"><a href="/">Al <span>Chemist</span></a></div>
+                <ul class="menu">
+                    <li><a href="/#home" class="hamburger-item">Home</a></li>
+                    <li><a href="/#about" class="hamburger-item">About</a></li>
+                    <li><a href="/#skills" class="hamburger-item">Skills</a></li>
+                    <li><a href="/#projects" class="hamburger-item">Projects</a></li>
+                    <li><a href="/#contacts" class="hamburger-item">Contacts</a></li>
+                </ul>
+                <div class="hamburger"></div>
+            </div>
+        </nav>
         <!-- <nav class="navbar">
             <div class="container">
                 <div class="logo"><a href="/">Al <span>Chemist</span></a></div>
                 
-<nav class="navbar sticky">
-    
 
-        <div class="container">
-            <div class="logo"><a href="/">Al <span>Chemist</span></a></div>
-            <ul class="menu">
-                <li><a href="/#home" class="hamburger-item">Home</a></li>
-                <li><a href="/#about" class="hamburger-item">About</a></li>
-                <li><a href="/skills" class="hamburger-item">Skills</a></li>
-                <li><a href="/projects" class="hamburger-item">Projects</a></li>
-                <li><a href="/#contacts" class="hamburger-item">Contacts</a></li>
-            </ul>
-            <div class="hamburger"></div>
-        </div>
-    </nav>
+
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo"><a href="/">Al <span>Chemist</span></a></div>
+                <ul class="menu">
+                    <li><a href="/#home" class="hamburger-item">Home</a></li>
+                    <li><a href="/#about" class="hamburger-item">About</a></li>
+                    <li><a href="/#skills" class="hamburger-item">Skills</a></li>
+                    <li><a href="/#projects" class="hamburger-item">Projects</a></li>
+                    <li><a href="/#contacts" class="hamburger-item">Contacts</a></li>
+                </ul>
+                <div class="hamburger"></div>
+            </div>
+        </nav>
                 <div class="hamburger"></div>
             </div>
         </nav> -->
     </header>
 
-    <section class="skills" id="skills">
+    <main>
+        <section class="skills" id="skills">
     <div class="container">
         <h2 class="title">My skills</h2>
         <div class="skills-content">
             <div class="column left">
-                <div class="text">My creative skills & experience</div>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam suscipit consequuntur maxime.
-                    Earum maxime, ea eum, amet architecto facilis fuga deserunt praesentium repellendus quas quia
-                    vitae iste! Sunt, omnis esse vero, iure reprehenderit architecto modi harum quibusdam facere
-                    nesciunt animi quis culpa nihil maiores natus dicta pariatur dolores dignissimos doloremque
-                    eligendi quod sapiente commodi fuga ipsam. Quaerat recusandae a doloremque!
-                </p>
-                <a href="#">Read more</a>
-            </div>
-            <div class="column right">
                 <div class="bars">
                     <div class="info">
                         <span>HTML</span>
-                        <span>90%</span>
+                        <span>75%</span>
                     </div>
                     <div class="line html"></div>
                 </div>
                 <div class="bars">
                     <div class="info">
                         <span>CSS</span>
-                        <span>60%</span>
+                        <span>70%</span>
                     </div>
                     <div class="line css"></div>
                 </div>
                 <div class="bars">
                     <div class="info">
+                        <span>SASS</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="line sass"></div>
+                </div>
+                <div class="bars">
+                    <div class="info">
                         <span>JavaScript</span>
-                        <span>80%</span>
+                        <span>65%</span>
                     </div>
                     <div class="line js"></div>
                 </div>
                 <div class="bars">
                     <div class="info">
-                        <span>PHP</span>
+                        <span>TypeScript</span>
                         <span>50%</span>
                     </div>
-                    <div class="line php"></div>
+                    <div class="line ts"></div>
                 </div>
                 <div class="bars">
                     <div class="info">
-                        <span>MySQL</span>
-                        <span>70%</span>
+                        <span>NodeJS/Express</span>
+                        <span>60%</span>
                     </div>
-                    <div class="line mysql"></div>
+                    <div class="line node"></div>
+                </div>
+                <div class="bars">
+                    <div class="info">
+                        <span>NoSQL (Mongo)</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="line mongo"></div>
+                </div>
+                <div class="bars">
+                    <div class="info">
+                        <span>Mongoose</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="line mongoose"></div>
+                </div>
+            </div>
+            <div class="column right">
+                <div class="bars">
+                    <div class="info">
+                        <span>Firebase/Firestore</span>
+                        <span>30%</span>
+                    </div>
+                    <div class="line fire"></div>
+                </div>
+                <div class="bars">
+                    <div class="info">
+                        <span>SQL (MySQL)</span>
+                        <span>25%</span>
+                    </div>
+                    <div class="line sql"></div>
+                </div>
+                <div class="bars">
+                    <div class="info">
+                        <span>jQuery</span>
+                        <span>40%</span>
+                    </div>
+                    <div class="line jquery"></div>
+                </div>
+                <div class="bars">
+                    <div class="info">
+                        <span>React</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="line react"></div>
+                </div>
+                <div class="bars">
+                    <div class="info">
+                        <span>Redux</span>
+                        <span>30%</span>
+                    </div>
+                    <div class="line redux"></div>
+                </div>
+            </div>
+
+            <div class="bottom">
+                <div class="other-skills">
+                    <h4>Other Skills</h4>
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>REST API</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Template engines (Handlebars)</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Gulp</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Jekyll</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>C#/.NET Core</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Python</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Data structures</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Algorithms</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>AWS</li>
+                    </ul>
+                </div>
+                <div class="soft-skills">
+                    <h4>Soft Skills</h4>
+                    <ul class="fa-ul">
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Self-Motivation</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Teamwork player</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Eager to Learn</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Fast Learner</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Communication</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Responsibility</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Collaboration</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Problem Solving</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Work under pressure</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Conscientious</li>
+                        <li><span class="fa-li"><i class="fas fa-check"></i></span>Hardworking person</li>
+                    </ul>
+                </div>
+                <div class="lang-skills">
+                    <h4>Language Skills</h4>
+                    <div class="info">
+                        <span>Bulgarian</span>
+                        <span>(native speaker)</span>
+                    </div>
+                    <div class="info">
+                        <span>English</span>
+                        <span>B2</span>
+                    </div>
+                    <div class="info">
+                        <span>Danish</span>
+                        <span>A1</span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+    </main>
 
     <footer></footer>
 
@@ -127,15 +233,9 @@
         </span>
     </div>
 
-    <div class="scroll-btn-up">
+    <div class="btn scroll-btn-up">
         <a href="#"><i class="icon fas fa-angle-up"></i></a>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" defer></script>
-    <script src="/scripts/scripts.js" defer></script>
 
 </body>
 

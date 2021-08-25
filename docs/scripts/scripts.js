@@ -1,14 +1,19 @@
 $(document).ready(function () {
-    console.log("Web site loaded!");
-    $(window).on('load', function () {
-        // console.log($('#preloader').length);
-        if (window.location.pathname === '/') {
+    // Another possible option:
+    // document.addEventListener("DOMContentLoaded", function () {
+    // });
+    $(document).ready(function () {
+        if (window.location.pathname === '/' && window.location.hash === "") {
+            $('.navbar').removeClass('sticky');
+
             if ($('#preloader').length > 0) {
-                $('#preloader').delay(250).fadeOut('slow', function () {
+                $('#preloader').delay(200).fadeOut('slow', function () {
                     $(this).remove();
                 });
             }
         } else {
+            $('.navbar').addClass('sticky');
+
             $('#preloader').hide();
         }
     });
@@ -16,7 +21,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
         if (this.scrollY > 20) {
             $('.navbar').addClass('sticky');
-        } else {
+        } else if (this.scrollY <= 20 && (window.location.pathname !== '/skills/' && window.location.pathname !== '/projects/')) {
             $('.navbar').removeClass('sticky');
         }
 
@@ -35,7 +40,6 @@ $(document).ready(function () {
 
     if ($('.typing-1-items').length) {
         const typing1items = $(".typing-1-items").text();
-        // console.log(typing1items);
         const typed1 = new Typed(".typing-1", {
             strings: typing1items.split(', '),
             typeSpeed: 100,
@@ -46,7 +50,6 @@ $(document).ready(function () {
 
     if ($('.typing-2-items').length) {
         const typing2items = $('.typing-2-items').text();
-        // console.log(typing2items);
         const typed2 = new Typed('.typing-2', {
             strings: typing2items.split(', '),
             typeSpeed: 100,
@@ -54,4 +57,26 @@ $(document).ready(function () {
             loop: true
         });
     }
+
+    // owl script
+    $('.carousel').owlCarousel({
+        margin: 20,
+        loop: true,
+        autoplayTimeOut: 2000,
+        autoplayHoverPause: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false
+            },
+            768: {
+                items: 2,
+                nav: false
+            },
+            1024: {
+                items: 3,
+                nav: false
+            }
+        }
+    });
 });

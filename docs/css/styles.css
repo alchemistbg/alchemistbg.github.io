@@ -1,5 +1,5 @@
 @import url("https://use.fontawesome.com/releases/v5.11.2/css/all.css");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
 * {
   box-sizing: inherit; }
 
@@ -13,7 +13,9 @@ html {
   padding: 0; }
 
 html {
-  font: 8px "Open Sans", sans-serif; }
+  font-size: 12px;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif; }
 
 @media (min-width: 768px) {
   html {
@@ -154,7 +156,7 @@ section {
       left: 50%;
       width: 14rem;
       height: 0.3rem;
-      background: #111111;
+      background: #222222;
       transform: translate(-50%); }
     section .title:after {
       position: absolute;
@@ -162,8 +164,8 @@ section {
       left: 50%;
       font-size: 0.5em;
       color: #c00f0f;
-      padding: 0.5rem;
-      background: #ffffff;
+      padding: 0.2em 0.5rem;
+      background: white;
       transform: translate(-50%); }
 
 .container {
@@ -172,13 +174,24 @@ section {
   margin: auto; }
   @media (max-width: 1024px) {
     .container {
-      padding: 0 3em; } }
+      padding: 0 3em;
+      max-width: 80vw; } }
+  @media (max-width: 768px) {
+    .container {
+      max-width: 95vw; } }
 
-.about .about-content {
+.about .about-content,
+.skills .skills-content-summary,
+.skills .skills-content {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between; }
+  @media (max-width: 768px) {
+    .about .about-content,
+    .skills .skills-content-summary,
+    .skills .skills-content {
+      display: block; } }
 
 #preloader {
   margin: auto;
@@ -190,7 +203,7 @@ section {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  color: #ffffff;
+  color: white;
   background: black;
   font-size: 4em;
   font-weight: 600;
@@ -244,32 +257,39 @@ section {
   100% {
     transform: translateY(0px); } }
 
-.scroll-btn-up {
-  position: fixed;
-  right: 1em;
-  bottom: 0.5em;
-  height: 1.5em;
-  width: 1.5em;
-  font-size: 2em;
-  line-height: 1.5em;
+.btn {
   text-align: center;
-  color: #ffffff;
+  color: white;
   background: #c00f0f;
+  border: 2px solid #c00f0f;
   border-radius: 0.3rem;
-  z-index: 999;
-  cursor: pointer;
-  pointer-events: none;
-  opacity: 0;
-  transition: all 0.3s ease; }
-  .scroll-btn-up .icon {
-    color: #ffffff; }
-    .scroll-btn-up .icon:hover {
-      color: #ccc;
-      background-color: #c00f0f; }
-  .scroll-btn-up.show {
-    pointer-events: auto;
-    opacity: 1;
-    bottom: 1em; }
+  transition: all 0.3s ease;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  padding: 0.5em 1em; }
+  .btn:hover {
+    background: white;
+    color: #c00f0f; }
+  .btn.scroll-btn-up {
+    padding: 0;
+    font-size: 2em;
+    position: fixed;
+    right: 1em;
+    bottom: 0.5em;
+    height: 1.6em;
+    width: 1.5em;
+    z-index: 999;
+    cursor: pointer;
+    pointer-events: none;
+    opacity: 0;
+    transition: all 0.3s ease; }
+    .btn.scroll-btn-up:hover {
+      background: #c00f0f;
+      color: white; }
+    .btn.scroll-btn-up.show {
+      pointer-events: auto;
+      opacity: 1;
+      bottom: 1em; }
 
 .navbar {
   position: fixed;
@@ -278,6 +298,8 @@ section {
   font-family: "Ubuntu", sans-serif;
   z-index: 999;
   transition: all 0.3s ease; }
+  .navbar.static {
+    transition: none; }
   .navbar.sticky {
     padding: 1em 0;
     background-color: #c00f0f; }
@@ -288,20 +310,20 @@ section {
   .navbar .logo a {
     font-size: 2em;
     font-weight: 600;
-    color: #ffffff; }
+    color: white; }
     .navbar .logo a span {
       color: #c00f0f;
       transition: all 0.3s ease; }
   .navbar.sticky .logo a,
   .navbar.sticky .logo a span {
-    color: #ffffff;
+    color: white;
     transition: all 0.3s ease; }
   .navbar .menu li {
     list-style: none;
     display: inline-block; }
     .navbar .menu li a {
       display: block;
-      color: #ffffff;
+      color: white;
       font-size: 1.2em;
       font-weight: 500;
       margin-left: 1.5em;
@@ -309,10 +331,10 @@ section {
       .navbar .menu li a:hover {
         color: #c00f0f; }
   .navbar.sticky .menu li a:hover {
-    color: #ffffff; }
+    color: white; }
   .navbar .hamburger,
   .navbar .hamburger-item {
-    color: #ffffff;
+    color: white;
     font-size: 1.5em;
     cursor: pointer;
     display: none; }
@@ -342,7 +364,7 @@ section {
         content: '\f0c9';
         font-family: 'Font Awesome 5 Free';
         font-weight: bold;
-        color: #ffffff; }
+        color: white; }
       .navbar .hamburger.active:after {
         content: '\f00d'; } }
 
@@ -353,7 +375,7 @@ section {
   background-attachment: fixed;
   height: 100vh;
   min-height: 30em;
-  color: #ffffff;
+  color: white;
   font-family: "Ubuntu", sans-serif; }
   .home .container {
     margin: auto 0 auto 4em; }
@@ -399,5 +421,268 @@ section {
 .about .about-content p {
   text-align: justify; }
 
+@media (max-width: 768px) {
+  .about .about-content .left,
+  .about .about-content .right {
+    width: 100%; }
+  .about .about-content .left {
+    margin-bottom: 2em; } }
+
 .skills .title:after {
   content: "what i know"; }
+
+.skills .skills-content-summary .column,
+.skills .skills-content .column {
+  width: calc(50% - 2em); }
+
+.skills .skills-content-summary .right-summary .bars,
+.skills .skills-content-summary .left .bars,
+.skills .skills-content-summary .right .bars,
+.skills .skills-content .right-summary .bars,
+.skills .skills-content .left .bars,
+.skills .skills-content .right .bars {
+  margin-bottom: 1.2em;
+  width: 100%; }
+
+.skills .skills-content-summary .right-summary .info,
+.skills .skills-content-summary .left .info,
+.skills .skills-content-summary .right .info,
+.skills .skills-content .right-summary .info,
+.skills .skills-content .left .info,
+.skills .skills-content .right .info {
+  display: flex;
+  margin-bottom: 0.5em;
+  align-items: center;
+  justify-content: space-between; }
+
+.skills .skills-content-summary .right-summary span,
+.skills .skills-content-summary .left span,
+.skills .skills-content-summary .right span,
+.skills .skills-content .right-summary span,
+.skills .skills-content .left span,
+.skills .skills-content .right span {
+  font-size: 1.5em;
+  font-weight: 500; }
+
+.skills .skills-content-summary .right-summary .line,
+.skills .skills-content-summary .left .line,
+.skills .skills-content-summary .right .line,
+.skills .skills-content .right-summary .line,
+.skills .skills-content .left .line,
+.skills .skills-content .right .line {
+  height: 0.3em;
+  width: 100%;
+  background: lightgray;
+  position: relative; }
+  .skills .skills-content-summary .right-summary .line:before,
+  .skills .skills-content-summary .left .line:before,
+  .skills .skills-content-summary .right .line:before,
+  .skills .skills-content .right-summary .line:before,
+  .skills .skills-content .left .line:before,
+  .skills .skills-content .right .line:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #c00f0f;
+    height: 100%;
+    width: 100%; }
+  .skills .skills-content-summary .right-summary .line.html:before,
+  .skills .skills-content-summary .left .line.html:before,
+  .skills .skills-content-summary .right .line.html:before,
+  .skills .skills-content .right-summary .line.html:before,
+  .skills .skills-content .left .line.html:before,
+  .skills .skills-content .right .line.html:before {
+    width: 75%; }
+  .skills .skills-content-summary .right-summary .line.css:before,
+  .skills .skills-content-summary .left .line.css:before,
+  .skills .skills-content-summary .right .line.css:before,
+  .skills .skills-content .right-summary .line.css:before,
+  .skills .skills-content .left .line.css:before,
+  .skills .skills-content .right .line.css:before {
+    width: 70%; }
+  .skills .skills-content-summary .right-summary .line.js:before,
+  .skills .skills-content-summary .left .line.js:before,
+  .skills .skills-content-summary .right .line.js:before,
+  .skills .skills-content .right-summary .line.js:before,
+  .skills .skills-content .left .line.js:before,
+  .skills .skills-content .right .line.js:before {
+    width: 65%; }
+  .skills .skills-content-summary .right-summary .line.mongo:before,
+  .skills .skills-content-summary .left .line.mongo:before,
+  .skills .skills-content-summary .right .line.mongo:before,
+  .skills .skills-content .right-summary .line.mongo:before,
+  .skills .skills-content .left .line.mongo:before,
+  .skills .skills-content .right .line.mongo:before {
+    width: 60%; }
+  .skills .skills-content-summary .right-summary .line.react:before,
+  .skills .skills-content-summary .left .line.react:before,
+  .skills .skills-content-summary .right .line.react:before,
+  .skills .skills-content .right-summary .line.react:before,
+  .skills .skills-content .left .line.react:before,
+  .skills .skills-content .right .line.react:before {
+    width: 60%; }
+
+.skills .skills-content-summary .left-summary .text {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 1em; }
+
+.skills .skills-content-summary .left-summary p {
+  text-align: justify; }
+
+.skills .skills-content-summary .left-summary a {
+  display: inline-block;
+  font-weight: 600;
+  margin-top: 1em; }
+
+.skills .skills-content {
+  border: 2px solid red; }
+  .skills .skills-content .left,
+  .skills .skills-content .right {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column; }
+    .skills .skills-content .left .line.html:before,
+    .skills .skills-content .right .line.html:before {
+      width: 75%; }
+    .skills .skills-content .left .line.css:before,
+    .skills .skills-content .right .line.css:before {
+      width: 70%; }
+    .skills .skills-content .left .line.sass:before,
+    .skills .skills-content .right .line.sass:before {
+      width: 60%; }
+    .skills .skills-content .left .line.js:before,
+    .skills .skills-content .right .line.js:before {
+      width: 65%; }
+    .skills .skills-content .left .line.ts:before,
+    .skills .skills-content .right .line.ts:before {
+      width: 50%; }
+    .skills .skills-content .left .line.node:before,
+    .skills .skills-content .right .line.node:before {
+      width: 60%; }
+    .skills .skills-content .left .line.mongo:before,
+    .skills .skills-content .right .line.mongo:before {
+      width: 60%; }
+    .skills .skills-content .left .line.mongoose:before,
+    .skills .skills-content .right .line.mongoose:before {
+      width: 60%; }
+    .skills .skills-content .left .line.fire:before,
+    .skills .skills-content .right .line.fire:before {
+      width: 30%; }
+    .skills .skills-content .left .line.sql:before,
+    .skills .skills-content .right .line.sql:before {
+      width: 25%; }
+    .skills .skills-content .left .line.jquery:before,
+    .skills .skills-content .right .line.jquery:before {
+      width: 40%; }
+    .skills .skills-content .left .line.react:before,
+    .skills .skills-content .right .line.react:before {
+      width: 60%; }
+    .skills .skills-content .left .line.redux:before,
+    .skills .skills-content .right .line.redux:before {
+      width: 30%; }
+  .skills .skills-content .bottom {
+    margin-top: 2em;
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between; }
+    .skills .skills-content .bottom .lang-skills,
+    .skills .skills-content .bottom .other-skills,
+    .skills .skills-content .bottom .soft-skills {
+      width: 33%; }
+      .skills .skills-content .bottom .lang-skills li,
+      .skills .skills-content .bottom .other-skills li,
+      .skills .skills-content .bottom .soft-skills li {
+        margin-bottom: 0.3em; }
+    .skills .skills-content .bottom .lang-skills .info {
+      margin-bottom: 0.3em; }
+    .skills .skills-content .bottom .lang-skills .info {
+      display: flex;
+      justify-content: space-between; }
+      .skills .skills-content .bottom .lang-skills .info span:nth-child(2) {
+        font-weight: 600; }
+
+@media (max-width: 768px) {
+  .skills .skills-content-summary .left-summary a {
+    margin-bottom: 2em; }
+  .skills .skills-content-summary .column,
+  .skills .skills-content .column {
+    width: 100%; }
+  .skills .skills-content .bottom {
+    display: block; }
+    .skills .skills-content .bottom .other-skills,
+    .skills .skills-content .bottom .soft-skills,
+    .skills .skills-content .bottom .lang-skills {
+      width: 100%;
+      margin-top: 1.5em; } }
+
+.projects-carousel {
+  color: white;
+  background: black; }
+  .projects-carousel .title:before {
+    background: white; }
+  .projects-carousel .title:after {
+    content: "what i've done";
+    background: black; }
+  .projects-carousel .carousel .card {
+    background-color: #222222;
+    border-radius: 0.3rem;
+    padding: 1.5em 2em;
+    text-align: center;
+    position: relative;
+    transition: all 0.3s ease; }
+    .projects-carousel .carousel .card .link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .projects-carousel .carousel .card .link:after {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        content: 'Details';
+        font-size: 3em;
+        font-weight: 600;
+        color: #c00f0f;
+        background-color: rgba(255, 255, 255, 0.85);
+        opacity: 0;
+        transition: all 0.3s ease; }
+      .projects-carousel .carousel .card .link:hover:after {
+        opacity: 1; }
+    .projects-carousel .carousel .card .project-title {
+      color: white;
+      font-weight: 500;
+      margin: 1em 0 0.7em 0; }
+    .projects-carousel .carousel .card img {
+      width: 10em;
+      height: 10em;
+      -o-object-fit: cover;
+         object-fit: cover;
+      border: 2px solid #c00f0f;
+      transition: all 0.3s ease; }
+    .projects-carousel .carousel .card:hover {
+      cursor: pointer; }
+  .projects-carousel .owl-dots {
+    text-align: center;
+    margin-top: 20px; }
+  .projects-carousel .owl-dot {
+    width: 13px;
+    height: 13px;
+    margin: 0 5px;
+    outline: none !important;
+    border-radius: 50%;
+    border: 2px solid crimson !important;
+    transition: all 0.3s ease; }
+  .projects-carousel .owl-dot.active {
+    width: 35px;
+    border-radius: 14px; }
+  .projects-carousel .owl-dot.active,
+  .projects-carousel .owl-dot:hover {
+    background-color: crimson !important; }
