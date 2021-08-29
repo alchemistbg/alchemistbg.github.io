@@ -38,6 +38,7 @@ gulp.task('watch', function () {
         './*.html',
         "./_layouts/*.html",
         "./_includes/*.html",
+        "./_projects/*.html",
         "./scripts/*.js",
     ]).on('change', gulp.series('jekylldev', 'scss'));
 
