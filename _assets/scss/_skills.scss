@@ -10,7 +10,7 @@
         // justify-content: space-between;
 
         .column {
-            width: calc(50% - 2em);
+            width: $column-width;
         }
 
         .right-summary,
