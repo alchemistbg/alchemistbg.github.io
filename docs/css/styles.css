@@ -140,6 +140,9 @@ blockquote {
 html {
   scroll-behavior: smooth; }
 
+main {
+  min-height: calc(100vh - 4em); }
+
 section {
   padding: 7em 0; }
   section .title {
@@ -156,7 +159,7 @@ section {
       left: 50%;
       width: 14rem;
       height: 0.3rem;
-      background: #222222;
+      background: #202020;
       transform: translate(-50%); }
     section .title:after {
       position: absolute;
@@ -169,12 +172,10 @@ section {
       transform: translate(-50%); }
 
 .container {
-  max-width: 65vw;
-  padding: 0 5em;
+  max-width: 60vw;
   margin: auto; }
   @media (max-width: 1024px) {
     .container {
-      padding: 0 3em;
       max-width: 80vw; } }
   @media (max-width: 768px) {
     .container {
@@ -182,15 +183,18 @@ section {
 
 .about .about-content,
 .skills .skills-content-summary,
-.skills .skills-content {
+.skills .skills-content,
+.project-details .project-content,
+.contacts .contacts-content {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between; }
   @media (max-width: 768px) {
     .about .about-content,
     .skills .skills-content-summary,
-    .skills .skills-content {
+    .skills .skills-content,
+    .project-details .project-content,
+    .contacts .contacts-content {
       display: block; } }
 
 #preloader {
@@ -378,26 +382,38 @@ section {
   color: white;
   font-family: "Ubuntu", sans-serif; }
   .home .container {
-    margin: auto 0 auto 4em; }
-  .home .home-content .text-1 {
-    font-size: 2em; }
-  .home .home-content .text-2 {
-    font-size: 6em;
-    font-weight: 600; }
-  .home .home-content .text-3 {
-    font-size: 3em; }
-    .home .home-content .text-3 .typing-1-items {
-      display: none; }
-    .home .home-content .text-3 .typing-1 {
-      color: #c00f0f;
-      font-weight: 500; }
+    width: 60vw; }
+    .home .container .home-content .text-1 {
+      font-size: 2em; }
+    .home .container .home-content .text-2 {
+      font-size: 6em;
+      font-weight: 600; }
+    .home .container .home-content .text-3 {
+      font-size: 3em; }
+      .home .container .home-content .text-3 .typing-1-items {
+        display: none; }
+      .home .container .home-content .text-3 .typing-1 {
+        color: #c00f0f;
+        font-weight: 500; }
+    @media (max-width: 450px) {
+      .home .container .home-content .text-1 {
+        font-size: 1.5em; }
+      .home .container .home-content .text-2 {
+        font-size: 4em; }
+      .home .container .home-content .text-3 {
+        font-size: 2em; } }
+    @media (max-width: 1024px) {
+      .home .container {
+        width: 80vw; } }
+    @media (max-width: 768px) {
+      .home .container {
+        width: 95vw; } }
 
 .about .title:after {
   content: "who I am";
   color: #c00f0f; }
 
 .about .about-content .left {
-  border: 2px solid red;
   width: 45%; }
   .about .about-content .left img {
     height: auto;
@@ -407,7 +423,6 @@ section {
     border-radius: 0.3rem; }
 
 .about .about-content .right {
-  border: 2px solid green;
   width: 55%; }
   .about .about-content .right .text {
     font-size: 2em;
@@ -627,7 +642,7 @@ section {
     content: "what i've done";
     background: black; }
   .projects-carousel .carousel .card {
-    background-color: #222222;
+    background-color: #202020;
     border-radius: 0.3rem;
     padding: 1.5em 2em;
     text-align: center;
@@ -653,13 +668,10 @@ section {
         color: #c00f0f;
         background-color: rgba(255, 255, 255, 0.85);
         opacity: 0;
+        border-radius: 0.3rem;
         transition: all 0.3s ease; }
       .projects-carousel .carousel .card .link:hover:after {
         opacity: 1; }
-    .projects-carousel .carousel .card .project-title {
-      color: white;
-      font-weight: 500;
-      margin: 1em 0 0.7em 0; }
     .projects-carousel .carousel .card img {
       width: 10em;
       height: 10em;
@@ -667,11 +679,20 @@ section {
          object-fit: cover;
       border: 2px solid #c00f0f;
       transition: all 0.3s ease; }
+    .projects-carousel .carousel .card .project-title {
+      color: white;
+      font-weight: 500;
+      margin: 1em 0 0.7em 0; }
+    .projects-carousel .carousel .card .project-description {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden; }
     .projects-carousel .carousel .card:hover {
       cursor: pointer; }
   .projects-carousel .owl-dots {
     text-align: center;
-    margin-top: 20px; }
+    margin: 1em 0em 2em 0; }
   .projects-carousel .owl-dot {
     width: 13px;
     height: 13px;
@@ -686,3 +707,152 @@ section {
   .projects-carousel .owl-dot.active,
   .projects-carousel .owl-dot:hover {
     background-color: crimson !important; }
+  .projects-carousel .btn {
+    margin: 0 auto; }
+
+.project-details .column {
+  width: calc(50% - 2em); }
+  @media (max-width: 768px) {
+    .project-details .column {
+      width: 100%; } }
+
+.project-details img {
+  width: 100%; }
+
+.project-details .technology {
+  display: flex;
+  align-items: baseline;
+  align-items: center; }
+  .project-details .technology .tech-icon {
+    width: 1.5em;
+    font-size: 1.5em;
+    color: #c00f0f;
+    position: relative; }
+    .project-details .technology .tech-icon svg {
+      width: 0.9em;
+      height: auto;
+      fill: white;
+      background: #c00f0f; }
+
+.project-details .tech-name {
+  font-size: 1.2em;
+  font-weight: 500; }
+
+.contacts .title:after {
+  content: 'get in touch'; }
+
+.contacts .column {
+  width: calc(50% - 2em); }
+  @media (max-width: 768px) {
+    .contacts .column {
+      width: 100%; } }
+
+.contacts .left .info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.25em;
+  padding-bottom: 1em; }
+  .contacts .left .info-row .icon {
+    flex-basis: 2em;
+    text-align: center; }
+  .contacts .left .info-row .key,
+  .contacts .left .info-row .value {
+    flex-basis: calc(50% - 1.1em); }
+  .contacts .left .info-row .value {
+    text-align: right;
+    font-weight: 600; }
+  .contacts .left .info-row .icon:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #c00f0f; }
+  .contacts .left .info-row.name .icon:before {
+    content: '\f007'; }
+  .contacts .left .info-row.address .icon:before {
+    content: '\f3c5'; }
+  .contacts .left .info-row.phone .icon:before {
+    content: '\f3cd'; }
+  .contacts .left .info-row.mail .icon:before {
+    content: '\f1fa'; }
+
+.contacts .right form .user-data {
+  display: flex;
+  justify-content: space-between; }
+
+.contacts .right form .field {
+  height: 3em;
+  width: 100%;
+  margin-bottom: 1em; }
+
+.contacts .right form .name,
+.contacts .right form .email {
+  flex-basis: 49%; }
+
+.contacts .right form .message {
+  height: 6em;
+  width: 100%; }
+
+.contacts .right form .field input,
+.contacts .right form .message textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid gray;
+  border-radius: 0.3rem;
+  outline: none;
+  padding: 0 0.5em;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif; }
+  .contacts .right form .field input:focus,
+  .contacts .right form .message textarea:focus {
+    outline: 1px solid gray; }
+
+.contacts .right form .field {
+  position: relative; }
+  .contacts .right form .field input::-moz-placeholder, .contacts .right form .field textarea::-moz-placeholder {
+    color: gray; }
+  .contacts .right form .field input:-ms-input-placeholder, .contacts .right form .field textarea:-ms-input-placeholder {
+    color: gray; }
+  .contacts .right form .field input::placeholder,
+  .contacts .right form .field textarea::placeholder {
+    color: gray; }
+  .contacts .right form .field:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    position: absolute;
+    top: 0.7em;
+    left: 0.5em;
+    color: gray; }
+  .contacts .right form .field.name:before {
+    content: '\f007'; }
+  .contacts .right form .field.email:before {
+    content: '\f1fa'; }
+  .contacts .right form .field.name input,
+  .contacts .right form .field.email input {
+    padding-left: 1.7em; }
+
+.contacts .right form .message textarea {
+  padding-top: 0.5em;
+  resize: none;
+  line-height: 1.6em; }
+
+.contacts .right form .btn {
+  display: block;
+  cursor: pointer;
+  margin-left: auto; }
+
+.footer {
+  color: white;
+  background: black;
+  padding: 1.25em 0;
+  text-align: center; }
+  .footer a {
+    color: #c00f0f;
+    font-weight: bold; }
+    .footer a:hover {
+      text-decoration: underline; }
+  .footer span:before {
+    font-family: "Font Awesome 5 Free";
+    content: '\f1f9';
+    padding-right: 0.3em; }

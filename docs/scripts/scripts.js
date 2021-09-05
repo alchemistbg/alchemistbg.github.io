@@ -21,7 +21,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
         if (this.scrollY > 20) {
             $('.navbar').addClass('sticky');
-        } else if (this.scrollY <= 20 && (window.location.pathname !== '/skills/' && window.location.pathname !== '/projects/')) {
+        } else if (this.scrollY <= 20 && (!window.location.pathname.includes('/skills/') && !window.location.pathname.includes('/projects/'))) {
             $('.navbar').removeClass('sticky');
         }
 
@@ -62,7 +62,8 @@ $(document).ready(function () {
     $('.carousel').owlCarousel({
         margin: 20,
         loop: true,
-        autoplayTimeOut: 2000,
+        autoplay: true,
+        autoplayTimeout: 2000,
         autoplayHoverPause: true,
         responsive: {
             0: {
