@@ -15,7 +15,7 @@
         // display: flex;
 
         .card {
-            background-color: $color-black-light;
+            background-color: $color-medium-black;
             border-radius: $border-radius;
             padding: 1.5em 2em;
             text-align: center;
@@ -43,6 +43,7 @@
                     color: $color-red;
                     background-color: $color-white-alpha;
                     opacity: 0;
+                    border-radius: $border-radius;
                     transition: $transition-all;
                 }
 
@@ -51,18 +52,30 @@
                 }
             }
 
-            .project-title {
-                color: $color-white;
-                font-weight: $font-weight-medium;
-                margin: 1em 0 0.7em 0;
-            }
-
             img {
                 width: 10em;
                 height: 10em;
                 object-fit: cover;
                 border: 2px solid $color-red;
                 transition: $transition-all;
+            }
+
+            .project-title {
+                color: $color-white;
+                font-weight: $font-weight-medium;
+                margin: 1em 0 0.7em 0;
+            }
+
+            .project-description {
+                // width: 100%;
+                // white-space: nowrap;
+                // overflow: hidden;
+                // text-overflow: ellipsis;
+
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
             }
 
             &:hover {
@@ -92,7 +105,8 @@
 
     .owl-dots {
         text-align: center;
-        margin-top: 20px;
+        margin: 1em 0em 2em 0;
+
     }
 
     .owl-dot {
@@ -113,5 +127,60 @@
     .owl-dot.active,
     .owl-dot:hover {
         background-color: crimson !important;
+    }
+
+    .btn {
+        margin: 0 auto;
+    }
+}
+
+.project-details {
+    .column {
+        width: $column-width;
+
+        @media(max-width: 768px) {
+            width: 100%;
+        }
+
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .technology {
+        display: flex;
+        align-items: baseline;
+        align-items: center;
+        
+        .tech-icon {
+            width: 1.5em;
+            font-size: 1.5em;
+            color: $color-red;
+            // text-align: center;
+            position: relative;
+            
+            &.jquery{
+                // padding-left: 1em;
+            }
+            
+            svg {
+                width: 0.9em;
+                height: auto;
+                fill: $color-white;
+                background: $color-red;
+                // position: absolute;
+                // left: 0.2em;
+                // bottom: -0.2em;
+            }
+        }
+
+        .tech-name {}
+    }
+
+
+    .tech-name {
+        font-size: 1.2em;
+        font-weight: $font-weight-medium;
     }
 }
