@@ -102,19 +102,20 @@ layout: main
     <div class="container">
         <h2 class="title">My Projects</h2>
         <div class="carousel owl-carousel">
+            {%- for project in site.projects -%}
+            {{project.title}}
             <div class="card">
-                <a href="google.com" class="link">
-                    <img src="images/this.portfolio.jpg" alt="">
-                    <h5 class="project-title">this.portfolio</h5>
-                    <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, consequatur!</p>
+                <a href="projects/{{project.href}}" class="link">
+                    <img src="images/{{project.image}}" alt="">
+                    <h5 class="project-title">{{project.title}}</h5>
+                    <p class="project-description">{{project.description}}</p>
                 </a>
             </div>
-            <div class="card">
-                <a href="google.com" class="link">
-                    <img src="images/this.portfolio.jpg" alt="">
-                    <h5 class="project-title">this.portfolio</h5>
-                    <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. At, consequatur!</p>
-                </a>
+            {%- endfor -%}
+        </div>
+        <!-- <a class="btn" href="/projects">Read More</a> -->
+    </div>
+</section>
             </div>
             <div class="card">
                 <a href="google.com" class="link">
