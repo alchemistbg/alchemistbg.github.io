@@ -25,7 +25,7 @@ $(document).ready(function () {
             $('.navbar').removeClass('sticky');
         }
 
-        if (this.scrollY > 500) {
+        if (this.scrollY > 200) {
             $('.scroll-btn-up').addClass('show');
         } else {
             $('.scroll-btn-up').removeClass('show');
@@ -61,7 +61,9 @@ $(document).ready(function () {
     // owl script
     $('.carousel').owlCarousel({
         margin: 20,
-        loop: true,
+        center: true,
+        loop: ($('.owl-carousel .items').length >= 3),
+        // loop: true,
         autoplay: true,
         autoplayTimeout: 2000,
         autoplayHoverPause: true,
