@@ -184,7 +184,6 @@ section {
 .about .about-content,
 .skills .skills-content-summary,
 .skills .skills-content,
-.project-details .project-content,
 .contacts .contacts-content {
   display: flex;
   flex-wrap: wrap;
@@ -193,9 +192,19 @@ section {
     .about .about-content,
     .skills .skills-content-summary,
     .skills .skills-content,
-    .project-details .project-content,
     .contacts .contacts-content {
       display: block; } }
+  .about .about-content .column,
+  .skills .skills-content-summary .column,
+  .skills .skills-content .column,
+  .contacts .contacts-content .column {
+    width: calc(50% - 2em); }
+    @media (max-width: 768px) {
+      .about .about-content .column,
+      .skills .skills-content-summary .column,
+      .skills .skills-content .column,
+      .contacts .contacts-content .column {
+        width: 100%; } }
 
 #preloader {
   margin: auto;
@@ -214,8 +223,6 @@ section {
   display: flex;
   justify-content: center;
   align-items: center; }
-  #preloader.hidden {
-    display: none; }
 
 #preloader span {
   position: fixed;
@@ -270,10 +277,18 @@ section {
   transition: all 0.3s ease;
   font-size: 1.2em;
   line-height: 1.5em;
-  padding: 0.5em 1em; }
+  padding: 0.5em 1em;
+  font-weight: 600; }
   .btn:hover {
     background: white;
     color: #c00f0f; }
+  .btn.disabled {
+    cursor: not-allowed;
+    background-color: rgba(192, 15, 15, 0.5); }
+    .btn.disabled:hover {
+      cursor: not-allowed;
+      background-color: rgba(192, 15, 15, 0.5);
+      color: white; }
   .btn.scroll-btn-up {
     padding: 0;
     font-size: 2em;
@@ -413,42 +428,31 @@ section {
   content: "who I am";
   color: #c00f0f; }
 
-.about .about-content .left {
-  width: 45%; }
-  .about .about-content .left img {
-    height: auto;
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 0.3rem; }
+.about .about-content .left img {
+  height: auto;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.3rem; }
 
-.about .about-content .right {
-  width: 55%; }
-  .about .about-content .right .text {
-    font-size: 2em;
-    font-weight: 600;
-    margin-bottom: 1em; }
-    .about .about-content .right .text .typing-2-items {
-      display: none; }
-    .about .about-content .right .text .typing-2 {
-      color: #c00f0f; }
+.about .about-content .right .text {
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 1em; }
+  .about .about-content .right .text .typing-2-items {
+    display: none; }
+  .about .about-content .right .text .typing-2 {
+    color: #c00f0f; }
 
 .about .about-content p {
   text-align: justify; }
 
 @media (max-width: 768px) {
-  .about .about-content .left,
-  .about .about-content .right {
-    width: 100%; }
   .about .about-content .left {
     margin-bottom: 2em; } }
 
 .skills .title:after {
   content: "what i know"; }
-
-.skills .skills-content-summary .column,
-.skills .skills-content .column {
-  width: calc(50% - 2em); }
 
 .skills .skills-content-summary .right-summary .bars,
 .skills .skills-content-summary .left .bars,
@@ -549,82 +553,77 @@ section {
 
 .skills .skills-content-summary .left-summary a {
   display: inline-block;
-  font-weight: 600;
   margin-top: 1em; }
 
-.skills .skills-content {
-  border: 2px solid red; }
-  .skills .skills-content .left,
-  .skills .skills-content .right {
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column; }
-    .skills .skills-content .left .line.html:before,
-    .skills .skills-content .right .line.html:before {
-      width: 75%; }
-    .skills .skills-content .left .line.css:before,
-    .skills .skills-content .right .line.css:before {
-      width: 70%; }
-    .skills .skills-content .left .line.sass:before,
-    .skills .skills-content .right .line.sass:before {
-      width: 60%; }
-    .skills .skills-content .left .line.js:before,
-    .skills .skills-content .right .line.js:before {
-      width: 65%; }
-    .skills .skills-content .left .line.ts:before,
-    .skills .skills-content .right .line.ts:before {
-      width: 50%; }
-    .skills .skills-content .left .line.node:before,
-    .skills .skills-content .right .line.node:before {
-      width: 60%; }
-    .skills .skills-content .left .line.mongo:before,
-    .skills .skills-content .right .line.mongo:before {
-      width: 60%; }
-    .skills .skills-content .left .line.mongoose:before,
-    .skills .skills-content .right .line.mongoose:before {
-      width: 60%; }
-    .skills .skills-content .left .line.fire:before,
-    .skills .skills-content .right .line.fire:before {
-      width: 30%; }
-    .skills .skills-content .left .line.sql:before,
-    .skills .skills-content .right .line.sql:before {
-      width: 25%; }
-    .skills .skills-content .left .line.jquery:before,
-    .skills .skills-content .right .line.jquery:before {
-      width: 40%; }
-    .skills .skills-content .left .line.react:before,
-    .skills .skills-content .right .line.react:before {
-      width: 60%; }
-    .skills .skills-content .left .line.redux:before,
-    .skills .skills-content .right .line.redux:before {
-      width: 30%; }
-  .skills .skills-content .bottom {
-    margin-top: 2em;
-    flex-basis: 100%;
+.skills .skills-content .left,
+.skills .skills-content .right {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column; }
+  .skills .skills-content .left .line.html:before,
+  .skills .skills-content .right .line.html:before {
+    width: 75%; }
+  .skills .skills-content .left .line.css:before,
+  .skills .skills-content .right .line.css:before {
+    width: 70%; }
+  .skills .skills-content .left .line.sass:before,
+  .skills .skills-content .right .line.sass:before {
+    width: 60%; }
+  .skills .skills-content .left .line.js:before,
+  .skills .skills-content .right .line.js:before {
+    width: 65%; }
+  .skills .skills-content .left .line.ts:before,
+  .skills .skills-content .right .line.ts:before {
+    width: 50%; }
+  .skills .skills-content .left .line.node:before,
+  .skills .skills-content .right .line.node:before {
+    width: 60%; }
+  .skills .skills-content .left .line.mongo:before,
+  .skills .skills-content .right .line.mongo:before {
+    width: 60%; }
+  .skills .skills-content .left .line.mongoose:before,
+  .skills .skills-content .right .line.mongoose:before {
+    width: 60%; }
+  .skills .skills-content .left .line.fire:before,
+  .skills .skills-content .right .line.fire:before {
+    width: 30%; }
+  .skills .skills-content .left .line.sql:before,
+  .skills .skills-content .right .line.sql:before {
+    width: 25%; }
+  .skills .skills-content .left .line.jquery:before,
+  .skills .skills-content .right .line.jquery:before {
+    width: 40%; }
+  .skills .skills-content .left .line.react:before,
+  .skills .skills-content .right .line.react:before {
+    width: 60%; }
+  .skills .skills-content .left .line.redux:before,
+  .skills .skills-content .right .line.redux:before {
+    width: 30%; }
+
+.skills .skills-content .bottom {
+  margin-top: 2em;
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between; }
+  .skills .skills-content .bottom .lang-skills,
+  .skills .skills-content .bottom .other-skills,
+  .skills .skills-content .bottom .soft-skills {
+    width: 33%; }
+    .skills .skills-content .bottom .lang-skills li,
+    .skills .skills-content .bottom .other-skills li,
+    .skills .skills-content .bottom .soft-skills li {
+      margin-bottom: 0.3em; }
+  .skills .skills-content .bottom .lang-skills .info {
+    margin-bottom: 0.3em; }
+  .skills .skills-content .bottom .lang-skills .info {
     display: flex;
     justify-content: space-between; }
-    .skills .skills-content .bottom .lang-skills,
-    .skills .skills-content .bottom .other-skills,
-    .skills .skills-content .bottom .soft-skills {
-      width: 33%; }
-      .skills .skills-content .bottom .lang-skills li,
-      .skills .skills-content .bottom .other-skills li,
-      .skills .skills-content .bottom .soft-skills li {
-        margin-bottom: 0.3em; }
-    .skills .skills-content .bottom .lang-skills .info {
-      margin-bottom: 0.3em; }
-    .skills .skills-content .bottom .lang-skills .info {
-      display: flex;
-      justify-content: space-between; }
-      .skills .skills-content .bottom .lang-skills .info span:nth-child(2) {
-        font-weight: 600; }
+    .skills .skills-content .bottom .lang-skills .info span:nth-child(2) {
+      font-weight: 600; }
 
 @media (max-width: 768px) {
   .skills .skills-content-summary .left-summary a {
     margin-bottom: 2em; }
-  .skills .skills-content-summary .column,
-  .skills .skills-content .column {
-    width: 100%; }
   .skills .skills-content .bottom {
     display: block; }
     .skills .skills-content .bottom .other-skills,
@@ -641,19 +640,19 @@ section {
   .projects-carousel .title:after {
     content: "what i've done";
     background: black; }
-  .projects-carousel .carousel .card {
+  .projects-carousel .carousel-index .card {
     background-color: #202020;
     border-radius: 0.3rem;
     padding: 1.5em 2em;
     text-align: center;
     position: relative;
     transition: all 0.3s ease; }
-    .projects-carousel .carousel .card .link {
+    .projects-carousel .carousel-index .card .link {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center; }
-      .projects-carousel .carousel .card .link:after {
+      .projects-carousel .carousel-index .card .link:after {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -670,30 +669,34 @@ section {
         opacity: 0;
         border-radius: 0.3rem;
         transition: all 0.3s ease; }
-      .projects-carousel .carousel .card .link:hover:after {
+      .projects-carousel .carousel-index .card .link:hover:after {
         opacity: 1; }
-    .projects-carousel .carousel .card img {
+    .projects-carousel .carousel-index .card img {
       width: 10em;
       height: 10em;
       -o-object-fit: cover;
          object-fit: cover;
-      border: 2px solid #c00f0f;
+      border-radius: 0.3rem;
+      outline: 2px solid #c00f0f;
       transition: all 0.3s ease; }
-    .projects-carousel .carousel .card .project-title {
-      color: white;
+    .projects-carousel .carousel-index .card .project-title {
+      color: #c00f0f;
       font-weight: 500;
       margin: 1em 0 0.7em 0; }
-    .projects-carousel .carousel .card .project-description {
+    .projects-carousel .carousel-index .card .project-description {
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
       overflow: hidden; }
-    .projects-carousel .carousel .card:hover {
+    .projects-carousel .carousel-index .card:hover {
       cursor: pointer; }
-  .projects-carousel .owl-dots {
+  .projects-carousel .carousel-index .owl-item.center {
+    border: 2px solid #c00f0f;
+    border-radius: 0.3rem; }
+  .projects-carousel .carousel-index .owl-dots {
     text-align: center;
     margin: 1em 0em 2em 0; }
-  .projects-carousel .owl-dot {
+  .projects-carousel .carousel-index .owl-dot {
     width: 13px;
     height: 13px;
     margin: 0 5px;
@@ -701,14 +704,49 @@ section {
     border-radius: 50%;
     border: 2px solid crimson !important;
     transition: all 0.3s ease; }
-  .projects-carousel .owl-dot.active {
+  .projects-carousel .carousel-index .owl-dot.active {
     width: 35px;
     border-radius: 14px; }
-  .projects-carousel .owl-dot.active,
-  .projects-carousel .owl-dot:hover {
+  .projects-carousel .carousel-index .owl-dot.active,
+  .projects-carousel .carousel-index .owl-dot:hover {
     background-color: crimson !important; }
   .projects-carousel .btn {
     margin: 0 auto; }
+
+section.project-details {
+  padding-bottom: 3em; }
+
+.project-details .projects-nav.top {
+  margin-bottom: 2em; }
+
+.project-details .projects-nav.bottom {
+  margin-top: 2em; }
+
+.project-details .projects-nav ul {
+  display: flex;
+  justify-content: space-between; }
+  .project-details .projects-nav ul .btn {
+    padding: 0.2em 0.5em;
+    font-size: 1em; }
+    .project-details .projects-nav ul .btn.left:before, .project-details .projects-nav ul .btn.right:after {
+      font-family: "Font Awesome 5 Free"; }
+    .project-details .projects-nav ul .btn.left:before {
+      content: '\f100';
+      padding-right: 0.5em; }
+    .project-details .projects-nav ul .btn.right:after {
+      content: '\f101';
+      padding-left: 0.5em; }
+
+.project-details .project-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 0.5em; }
+  @media (max-width: 768px) {
+    .project-details .project-content .left {
+      order: 2; }
+    .project-details .project-content .right {
+      order: 1; } }
 
 .project-details .column {
   width: calc(50% - 2em); }
@@ -716,36 +754,68 @@ section {
     .project-details .column {
       width: 100%; } }
 
-.project-details img {
-  width: 100%; }
+.project-details .left div {
+  margin-bottom: 2em; }
 
-.project-details .technology {
+.project-details .left .url .url-link {
+  color: #c00f0f;
+  font-weight: 500; }
+
+.project-details .left .technology {
   display: flex;
-  align-items: baseline;
   align-items: center; }
-  .project-details .technology .tech-icon {
-    width: 1.5em;
+  .project-details .left .technology .tech-icon {
+    min-width: 1.5em;
     font-size: 1.5em;
-    color: #c00f0f;
-    position: relative; }
-    .project-details .technology .tech-icon svg {
+    color: #c00f0f; }
+    .project-details .left .technology .tech-icon svg {
       width: 0.9em;
-      height: auto;
+      height: auto; }
+    .project-details .left .technology .tech-icon.jquery svg {
       fill: white;
       background: #c00f0f; }
+    .project-details .left .technology .tech-icon.express {
+      font-size: 0.5em;
+      font-weight: bold;
+      min-width: 4.5em; }
+    .project-details .left .technology .tech-icon.mongo {
+      display: flex;
+      justify-content: center; }
+  .project-details .left .technology .tech-name {
+    font-size: 1.2em;
+    font-weight: 500; }
 
-.project-details .tech-name {
-  font-size: 1.2em;
-  font-weight: 500; }
+.project-details .left .sub-tech {
+  padding-left: 3em;
+  color: #404040; }
+
+.project-details .right .carousel-project {
+  width: 90%;
+  margin: 0 auto;
+  position: relative; }
+  .project-details .right .carousel-project .img-container .img-desc {
+    color: #c00f0f;
+    font-weight: 500;
+    margin-bottom: 0.5em; }
+  .project-details .right .carousel-project .owl-prev,
+  .project-details .right .carousel-project .owl-next {
+    position: absolute;
+    top: 5em; }
+  .project-details .right .carousel-project .owl-prev {
+    left: -1.7em; }
+  .project-details .right .carousel-project .owl-next {
+    right: -1.7em; }
+  .project-details .right .carousel-project .owl-prev i,
+  .project-details .right .carousel-project .owl-next i {
+    font-size: 3em;
+    color: rgba(192, 15, 15, 0.5);
+    transition: color 0.2s ease; }
+    .project-details .right .carousel-project .owl-prev i:hover,
+    .project-details .right .carousel-project .owl-next i:hover {
+      color: #c00f0f; }
 
 .contacts .title:after {
   content: 'get in touch'; }
-
-.contacts .column {
-  width: calc(50% - 2em); }
-  @media (max-width: 768px) {
-    .contacts .column {
-      width: 100%; } }
 
 .contacts .left .info-row {
   display: flex;

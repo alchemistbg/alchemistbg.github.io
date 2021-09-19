@@ -3,11 +3,20 @@ $(document).ready(function () {
     // document.addEventListener("DOMContentLoaded", function () {
     // });
     $(document).ready(function () {
+        console.log(window.location)
         if (window.location.pathname === '/' && window.location.hash === "") {
             $('.navbar').removeClass('sticky');
 
             if ($('#preloader').length > 0) {
                 $('#preloader').delay(200).fadeOut('slow', function () {
+                    $(this).remove();
+                });
+            }
+        } else if (window.location.pathname.startsWith("/projects/")) {
+            $('.navbar').addClass('sticky');
+            
+            if ($('#preloader').length > 0) {
+                $('#preloader').delay(100).fadeOut('slow', function () {
                     $(this).remove();
                 });
             }
@@ -25,7 +34,7 @@ $(document).ready(function () {
             $('.navbar').removeClass('sticky');
         }
 
-        if (this.scrollY > 500) {
+        if (this.scrollY > 200) {
             $('.scroll-btn-up').addClass('show');
         } else {
             $('.scroll-btn-up').removeClass('show');
@@ -59,12 +68,20 @@ $(document).ready(function () {
     }
 
     // owl script
-    $('.carousel').owlCarousel({
+
+    const carouselOptions = {
         margin: 20,
-        loop: true,
+        center: true,
         autoplay: true,
-        autoplayTimeout: 2000,
+        autoplayTimeout: 5000,
         autoplayHoverPause: true,
+        loop: true,
+    }
+    
+    $('.carousel-index').owlCarousel({
+        ...carouselOptions,
+        // loop: (Object.keys($('.carousel-index').children()).length - 2 > 3),
+        // loop: true,
         responsive: {
             0: {
                 items: 1,
@@ -79,5 +96,14 @@ $(document).ready(function () {
                 nav: false
             }
         }
+    });
+    
+    $('.carousel-project').owlCarousel({
+        ...carouselOptions,
+        autoHeight: true,
+        nav: true,
+        items: 1,
+        loop: true,
+        navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>']
     });
 });
