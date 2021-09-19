@@ -926,3 +926,26 @@ section.project-details {
     font-family: "Font Awesome 5 Free";
     content: '\f1f9';
     padding-right: 0.3em; }
+
+.not-found {
+  padding-top: 10em; }
+  .not-found .left {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; }
+    .not-found .left .icon:after {
+      flex-basis: 100%;
+      content: '\f5b4';
+      font-size: 8em;
+      font-weight: 400;
+      font-family: "Font Awesome 5 Free";
+      margin-right: 0.25em; }
+    .not-found .left h1 {
+      padding: 0;
+      margin: 0;
+      line-height: 1;
+      font-size: 5em; }
+    .not-found .left p {
+      padding: 0;
+      margin: 0;
+      line-height: 1; }
