@@ -90,7 +90,7 @@ $(document).ready(function () {
                 items: 1,
                 nav: false
             },
-            768: {
+            500: {
                 items: 2,
                 nav: false
             },

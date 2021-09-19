@@ -693,6 +693,9 @@ section {
   .projects-carousel .carousel-index .owl-item.center {
     border: 2px solid #c00f0f;
     border-radius: 0.3rem; }
+    @media (max-width: 500px) {
+      .projects-carousel .carousel-index .owl-item.center {
+        border: none; } }
   .projects-carousel .carousel-index .owl-dots {
     text-align: center;
     margin: 1em 0em 2em 0; }
