@@ -3,7 +3,7 @@ $(document).ready(function () {
     // document.addEventListener("DOMContentLoaded", function () {
     // });
     $(document).ready(function () {
-        console.log(window.location)
+        
         if (window.location.pathname === '/' && window.location.hash === "") {
             $('.navbar').removeClass('sticky');
 
@@ -25,8 +25,11 @@ $(document).ready(function () {
 
             $('#preloader').hide();
         }
+
+        $('.button button.btn').prop('disabled', true);
     });
 
+    
     $(window).scroll(function () {
         if (this.scrollY > 20) {
             $('.navbar').addClass('sticky');

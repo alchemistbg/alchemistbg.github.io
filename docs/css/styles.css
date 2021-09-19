@@ -282,11 +282,11 @@ section {
   .btn:hover {
     background: white;
     color: #c00f0f; }
-  .btn.disabled {
+  .btn:disabled {
     cursor: not-allowed;
     background-color: rgba(192, 15, 15, 0.5); }
-    .btn.disabled:hover {
-      cursor: not-allowed;
+    .btn:disabled:hover {
+      cursor: not-allowed !important;
       background-color: rgba(192, 15, 15, 0.5);
       color: white; }
   .btn.scroll-btn-up {
