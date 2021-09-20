@@ -1,0 +1,40 @@
+.not-found {
+    padding-top: 10em;
+    // display: flex;
+    // justify-content: space-between;
+
+    .column {
+        // border: 2px solid red;
+    }
+
+    .left {
+        display: flex;
+        flex-wrap: wrap;
+        // flex-direction: column;
+        align-items: center;
+
+
+        .icon:after {
+            flex-basis: 100%;
+            content: '\f5b4';
+            font-size: 8em;
+            font-weight: 400;
+            font-family: $font-awesome;
+            margin-right: 0.25em;
+        }
+
+        h1 {
+            padding: 0;
+            margin: 0;
+            line-height: 1;
+            font-size: 5em;
+        }
+
+        p {
+            padding: 0;
+            margin: 0;
+            line-height: 1;
+        }
+    }
+
+}
