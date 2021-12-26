@@ -1,0 +1,192 @@
+.contacts {
+    padding-bottom: 3em;
+
+    .title:after {
+        content: 'get in touch'
+    }
+
+    .left {
+        .info-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            font-size: 1.25em;
+            padding-bottom: 1em;
+
+            .icon {
+                flex-basis: 2em;
+                text-align: center;
+            }
+
+            .key,
+            .value {
+                flex-basis: calc(50% - 1.1em);
+            }
+
+            .value {
+                text-align: right;
+                font-weight: $font-weight-semiBold;
+            }
+
+            .icon:before {
+                font-family: $font-awesome;
+                font-weight: bold;
+                text-align: center;
+                font-size: 1.5rem;
+                color: $color-red;
+            }
+
+            &.name {
+                .icon:before {
+                    content: '\f007';
+                }
+            }
+
+            &.address {
+                .icon:before {
+                    content: '\f3c5';
+                }
+            }
+
+            &.phone {
+                .icon:before {
+                    content: '\f3cd';
+                }
+            }
+
+            &.mail {
+                .icon:before {
+                    content: '\f1fa';
+                }
+            }
+        }
+    }
+
+    .right {
+        form {
+            input[type=text]#webform {
+                display: none;
+            }
+
+            .user-data {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .field {
+                height: 3em;
+                width: 100%;
+                margin-bottom: 1.5em;
+            }
+
+            .name,
+            .email {
+                flex-basis: 49%;
+            }
+
+            .message {
+                height: 6em;
+                width: 100%;
+            }
+
+            .field input,
+            .message textarea {
+                height: 100%;
+                width: 100%;
+                border: 1px solid $color-light2-black;
+                border-radius: $border-radius;
+                outline: none;
+                padding: 0 0.5em;
+                font-size: 1em;
+                font-family: "Poppins", sans-serif;
+
+                &:focus {
+                    // outline: 1px solid $color-light2-black;
+                    border: 1px solid $color-red;
+                    outline: 1px solid $color-red;
+                }
+
+                &.filled {
+                    border: 1px solid $color-red;
+                }
+
+                &:focus-within {
+                    // color: red;
+                }
+            }
+
+            .field {
+                position: relative;
+
+                input::placeholder,
+                textarea::placeholder {
+                    color: $color-light2-black;
+                }
+
+                &:before {
+                    font-family: $font-awesome;
+                    font-weight: bold;
+                    position: absolute;
+                    top: 0.7em;
+                    left: 0.5em;
+                    color: $color-light2-black;
+                }
+
+                &.name:before {
+                    content: '\f007';
+                }
+
+                &.email:before {
+                    content: '\f1fa';
+                }
+
+                &.subject:before {
+                    content: '\f02b';
+                }
+
+                &.name input,
+                &.email input,
+                &.subject input {
+                    padding-left: 1.7em;
+                }
+
+                &.message textarea {
+                    padding-top: 0.5em;
+                    resize: none;
+                    line-height: 1.6em;
+                }
+
+                // & label.error {
+                //     color: #ff0000;
+                //     font-size: 0.8em;
+                // }
+            }
+
+            // .button{
+            //     position: relative;
+            // }
+
+            // .button:before{
+            //     position: absolute;
+            //     top: 0.5em;
+            //     right: 0.5em;
+            //     content: '\f1d8';
+            //     font-family: $font-awesome;
+            //     font-size: 1.5em;
+            //     color: $color-white;
+
+            //     &:hover:before{
+            //         color: $color-red;
+            //     }   
+            // }
+
+            .btn {
+                // padding-right: 2.5em;
+                display: block;
+                cursor: pointer;
+                margin-left: auto;
+            }
+        }
+    }
+}
