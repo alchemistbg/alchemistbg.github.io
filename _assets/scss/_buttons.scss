@@ -8,10 +8,22 @@
     font-size: 1.2em;
     line-height: 1.5em;
     padding: 0.5em 1em;
+    font-weight: 600;
 
     &:hover {
         background: $color-white;
         color: $color-red;
+    }
+
+    &:disabled{
+        cursor: not-allowed;
+        background-color: $color-red-alpha;
+        
+        &:hover{
+            cursor: not-allowed !important;
+            background-color: $color-red-alpha;
+            color: $color-white;
+        }
     }
 
     &.scroll-btn-up {
@@ -33,16 +45,7 @@
             background: $color-red;
             color: $color-white;
         }
-
-        // .icon {
-        //     color: $color-white;
-
-        //     &:hover {
-        //         color: $color-white;
-        //         background-color: $color-red;
-        //     }
-        // }
-
+        
         &.show {
             pointer-events: auto;
             opacity: 1;
