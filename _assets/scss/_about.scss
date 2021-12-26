@@ -8,7 +8,6 @@
 
     .about-content {
         .left {
-            width: 45%;
 
             img {
                 height: auto;
@@ -19,7 +18,6 @@
         }
 
         .right {
-            width: 55%;
 
             .text {
                 font-size: 2em;
@@ -41,11 +39,6 @@
         }
 
         @media(max-width: 768px) {
-
-            .left,
-            .right {
-                width: 100%;
-            }
 
             .left {
                 margin-bottom: 2em;
