@@ -11,6 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/disableautofill/src/jquery.disableAutoFill.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script> -->
 
     <script src="{{ site.baseurl | relative_url}}scripts/scripts.js"></script>
 
@@ -27,14 +29,7 @@
 
 <body id="top">
     <header class="header">
-        {% include navigation.html location="header" %}
-        <!-- <nav class="navbar">
-            <div class="container">
-                <div class="logo"><a href="{{ site.baseurl | relative_url }}">Al <span>Chemist</span></a></div>
-                {% include navigation.html location="header" %}
-                <div class="hamburger"></div>
-            </div>
-        </nav> -->
+        {% include siteNavigation.html location="header" %}
     </header>
 
     <main>
@@ -58,9 +53,7 @@
         </span>
     </div>
 
-    <div class="btn scroll-btn-up">
-        <a href="#"><i class="icon fas fa-angle-up"></i></a>
-    </div>
+    <a class="btn scroll-btn-up" href="#"><i class="icon fas fa-angle-up"></i></a>
 
 </body>
 
