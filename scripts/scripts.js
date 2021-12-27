@@ -3,6 +3,7 @@ $(document).ready(function () {
     // document.addEventListener("DOMContentLoaded", function () {
     // });
     $(document).ready(function () {
+        
         if (window.location.pathname === '/' && window.location.hash === "") {
             $('.navbar').removeClass('sticky');
 
@@ -11,13 +12,26 @@ $(document).ready(function () {
                     $(this).remove();
                 });
             }
+        } else if (window.location.pathname.startsWith("/projects/")) {
+            $('.navbar').addClass('sticky');
+            
+            if ($('#preloader').length > 0) {
+                $('#preloader').delay(100).fadeOut('slow', function () {
+                    $(this).remove();
+                });
+            }
         } else {
             $('.navbar').addClass('sticky');
 
             $('#preloader').hide();
         }
-    });
 
+        document.getElementById('contacts-form').setAttribute('novalidate', '');
+
+        //TO BE DELETED!!!
+        // $('.button .btn').prop('disabled', true);
+    });
+    
     $(window).scroll(function () {
         if (this.scrollY > 20) {
             $('.navbar').addClass('sticky');
