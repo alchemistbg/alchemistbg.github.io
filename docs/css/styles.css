@@ -613,13 +613,27 @@ section {
     .skills .skills-content .bottom .other-skills li,
     .skills .skills-content .bottom .soft-skills li {
       margin-bottom: 0.3em; }
+  .skills .skills-content .bottom .lang-skills h4 {
+    position: relative; }
   .skills .skills-content .bottom .lang-skills .info {
-    margin-bottom: 0.3em; }
-  .skills .skills-content .bottom .lang-skills .info {
+    margin-bottom: 0.3em;
     display: flex;
     justify-content: space-between; }
     .skills .skills-content .bottom .lang-skills .info span:nth-child(2) {
       font-weight: 600; }
+  .skills .skills-content .bottom .lang-skills .legend-bullet {
+    font-size: 0.8em;
+    color: #c00f0f;
+    position: absolute;
+    padding-left: 0.2em; }
+  .skills .skills-content .bottom .lang-skills .legend-info {
+    font-size: 0.8em;
+    text-align: right;
+    border-top: 2px solid #c00f0f;
+    margin-top: 1em; }
+    .skills .skills-content .bottom .lang-skills .legend-info a {
+      color: #c00f0f;
+      font-weight: bold; }
 
 @media (max-width: 768px) {
   .skills .skills-content-summary .left-summary a {
@@ -770,6 +784,7 @@ section.project-details {
   .project-details .left .technology .tech-icon {
     min-width: 1.5em;
     font-size: 1.5em;
+    text-align: center;
     color: #c00f0f; }
     .project-details .left .technology .tech-icon svg {
       width: 0.9em;
@@ -784,9 +799,16 @@ section.project-details {
     .project-details .left .technology .tech-icon.mongo {
       display: flex;
       justify-content: center; }
+  .project-details .left .technology .tech-image {
+    width: 1.5em;
+    font-size: 1.5em; }
+    .project-details .left .technology .tech-image img {
+      width: 100%;
+      height: 100%; }
   .project-details .left .technology .tech-name {
     font-size: 1.2em;
-    font-weight: 500; }
+    font-weight: 500;
+    margin-left: 0.5em; }
 
 .project-details .left .sub-tech {
   padding-left: 3em;
@@ -817,103 +839,105 @@ section.project-details {
     .project-details .right .carousel-project .owl-next i:hover {
       color: #c00f0f; }
 
-.contacts .title:after {
-  content: 'get in touch'; }
-
-.contacts .left .info-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 1.25em;
-  padding-bottom: 1em; }
-  .contacts .left .info-row .icon {
-    flex-basis: 2em;
-    text-align: center; }
-  .contacts .left .info-row .key,
-  .contacts .left .info-row .value {
-    flex-basis: calc(50% - 1.1em); }
-  .contacts .left .info-row .value {
-    text-align: right;
-    font-weight: 600; }
-  .contacts .left .info-row .icon:before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: bold;
-    text-align: center;
-    font-size: 1.5rem;
-    color: #c00f0f; }
-  .contacts .left .info-row.name .icon:before {
-    content: '\f007'; }
-  .contacts .left .info-row.address .icon:before {
-    content: '\f3c5'; }
-  .contacts .left .info-row.phone .icon:before {
-    content: '\f3cd'; }
-  .contacts .left .info-row.mail .icon:before {
-    content: '\f1fa'; }
-
-.contacts .right form .user-data {
-  display: flex;
-  justify-content: space-between; }
-
-.contacts .right form .field {
-  height: 3em;
-  width: 100%;
-  margin-bottom: 1em; }
-
-.contacts .right form .name,
-.contacts .right form .email {
-  flex-basis: 49%; }
-
-.contacts .right form .message {
-  height: 6em;
-  width: 100%; }
-
-.contacts .right form .field input,
-.contacts .right form .message textarea {
-  height: 100%;
-  width: 100%;
-  border: 1px solid gray;
-  border-radius: 0.3rem;
-  outline: none;
-  padding: 0 0.5em;
-  font-size: 1em;
-  font-family: "Poppins", sans-serif; }
-  .contacts .right form .field input:focus,
-  .contacts .right form .message textarea:focus {
-    outline: 1px solid gray; }
-
-.contacts .right form .field {
-  position: relative; }
-  .contacts .right form .field input::-moz-placeholder, .contacts .right form .field textarea::-moz-placeholder {
-    color: gray; }
-  .contacts .right form .field input:-ms-input-placeholder, .contacts .right form .field textarea:-ms-input-placeholder {
-    color: gray; }
-  .contacts .right form .field input::placeholder,
-  .contacts .right form .field textarea::placeholder {
-    color: gray; }
-  .contacts .right form .field:before {
-    font-family: "Font Awesome 5 Free";
-    font-weight: bold;
-    position: absolute;
-    top: 0.7em;
-    left: 0.5em;
-    color: gray; }
-  .contacts .right form .field.name:before {
-    content: '\f007'; }
-  .contacts .right form .field.email:before {
-    content: '\f1fa'; }
-  .contacts .right form .field.name input,
-  .contacts .right form .field.email input {
-    padding-left: 1.7em; }
-
-.contacts .right form .message textarea {
-  padding-top: 0.5em;
-  resize: none;
-  line-height: 1.6em; }
-
-.contacts .right form .btn {
-  display: block;
-  cursor: pointer;
-  margin-left: auto; }
+.contacts {
+  padding-bottom: 3em; }
+  .contacts .title:after {
+    content: 'get in touch'; }
+  .contacts .left .info-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.25em;
+    padding-bottom: 1em; }
+    .contacts .left .info-row .icon {
+      flex-basis: 2em;
+      text-align: center; }
+    .contacts .left .info-row .key,
+    .contacts .left .info-row .value {
+      flex-basis: calc(50% - 1.1em); }
+    .contacts .left .info-row .value {
+      text-align: right;
+      font-weight: 600; }
+    .contacts .left .info-row .icon:before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.5rem;
+      color: #c00f0f; }
+    .contacts .left .info-row.name .icon:before {
+      content: '\f007'; }
+    .contacts .left .info-row.address .icon:before {
+      content: '\f3c5'; }
+    .contacts .left .info-row.phone .icon:before {
+      content: '\f3cd'; }
+    .contacts .left .info-row.mail .icon:before {
+      content: '\f1fa'; }
+  .contacts .right form input[type=text]#webform {
+    display: none; }
+  .contacts .right form .user-data {
+    display: flex;
+    justify-content: space-between; }
+  .contacts .right form .field {
+    height: 3em;
+    width: 100%;
+    margin-bottom: 1.5em; }
+  .contacts .right form .name,
+  .contacts .right form .email {
+    flex-basis: 49%; }
+  .contacts .right form .message {
+    height: 6em;
+    width: 100%; }
+  .contacts .right form .field input,
+  .contacts .right form .message textarea {
+    height: 100%;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 0.3rem;
+    outline: none;
+    padding: 0 0.5em;
+    font-size: 1em;
+    font-family: "Poppins", sans-serif; }
+    .contacts .right form .field input:focus,
+    .contacts .right form .message textarea:focus {
+      border: 1px solid #c00f0f;
+      outline: 1px solid #c00f0f; }
+    .contacts .right form .field input.filled,
+    .contacts .right form .message textarea.filled {
+      border: 1px solid #c00f0f; }
+  .contacts .right form .field {
+    position: relative; }
+    .contacts .right form .field input::-moz-placeholder, .contacts .right form .field textarea::-moz-placeholder {
+      color: gray; }
+    .contacts .right form .field input:-ms-input-placeholder, .contacts .right form .field textarea:-ms-input-placeholder {
+      color: gray; }
+    .contacts .right form .field input::placeholder,
+    .contacts .right form .field textarea::placeholder {
+      color: gray; }
+    .contacts .right form .field:before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: bold;
+      position: absolute;
+      top: 0.7em;
+      left: 0.5em;
+      color: gray; }
+    .contacts .right form .field.name:before {
+      content: '\f007'; }
+    .contacts .right form .field.email:before {
+      content: '\f1fa'; }
+    .contacts .right form .field.subject:before {
+      content: '\f02b'; }
+    .contacts .right form .field.name input,
+    .contacts .right form .field.email input,
+    .contacts .right form .field.subject input {
+      padding-left: 1.7em; }
+    .contacts .right form .field.message textarea {
+      padding-top: 0.5em;
+      resize: none;
+      line-height: 1.6em; }
+  .contacts .right form .btn {
+    display: block;
+    cursor: pointer;
+    margin-left: auto; }
 
 .footer {
   color: white;

@@ -11,6 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/disableautofill/src/jquery.disableAutoFill.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script> -->
 
     <script src="/scripts/scripts.js"></script>
 
@@ -54,7 +56,7 @@
             <a class="btn left" href="/projects/project4">Previous project</a>
         </li>
         <li>
-            <a class="btn right" href="/projects/project1">Next project</a>
+            <a class="btn right" href="/projects/project6">Next project</a>
         </li>
     </ul>
 </nav><h3 class='project-title'>Reactive Bookstore</h3>
@@ -67,63 +69,110 @@
                     <div class="technologies">
                         <h5 class="tech-title">Used Technologies</h5><p class="technology">
                             
-                            <span class="tech-icon"><i class="fab fa-html5"></i></span>
+                                
+                                <span class="tech-icon"><i class="fab fa-html5"></i></span>
+                                
+                                                        
                             
                             <span class="tech-name">HTML</span>    
+
                         </p><p class="technology">
                             
-                            <span class="tech-icon"><i class="fab fa-css3-alt"></i></span>
+                                
+                                <span class="tech-icon"><i class="fab fa-css3-alt"></i></span>
+                                
+                                                        
                             
                             <span class="tech-name">CSS</span>    
+
                         </p><p class="technology">
                             
-                            <span class="tech-icon"><i class="fab fa-sass"></i></span>
+                                
+                                <span class="tech-icon"><i class="fab fa-sass"></i></span>
+                                
+                                                        
                             
                             <span class="tech-name">SASS</span>    
+
                         </p><p class="technology">
                             
-                            <span class="tech-icon"><i class="fab fa-font-awesome"></i></span>
+                                
+                                <span class="tech-icon"><i class="fab fa-font-awesome"></i></span>
+                                
+                                                        
                             
                             <span class="tech-name">Font Awesome</span>    
+
                         </p><p class="technology">
                             
-                            <span class="tech-icon google"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 26"><g transform="matrix(1.1172997,0,0,1.1172997,-1.6759496,-6.7037983)"><g id="g1"><path fill="#fbbc04" d="M 1.5,29 C 1.5,29 16,6 16,6 c 0,0 9,0 9,0 0,0 0,3.1999998 0,3.1999998 C 25,9.1999998 12.5,29 12.5,29" id="path58" /><path fill="#1a73e8" d="m 25,29 c 0,0 -9,0 -9,0 0,0 0,-23 0,-23 0,0 9,0 9,0 0,0 0,23 0,23 z" id="path64" /><path fill="#34a853" d="m 31.5,22.5 c 0,3.59 -2.91,6.5 -6.5,6.5 0,0 0,-13 0,-13 3.59,0 6.5,2.91 6.5,6.5 z" id="path70" /><path fill="#0d652d" d="m 25,29 c -3.59,0 -6.5,-2.91 -6.5,-6.5 0,-3.59 2.91,-6.5 6.5,-6.5 0,0 0,13 0,13 z" id="path76" /><path fill="#1a73e8" d="m 30,11 c 0,2.761 -2.238,5 -5,5 0,0 0,-10 0,-10 2.762,0 5,2.2390001 5,5 z" id="path82" /><path fill="#174ea6" d="m 25,16 c -2.762,0 -5,-2.239 -5,-5 0,-2.7609999 2.238,-5 5,-5 0,0 0,10 0,10 z" id="path88" /><path fill="#ea4335" d="M 2,10.5 C 2,8.0150001 4.0150001,6 6.5,6 8.9849999,6 11,8.0150001 11,10.5 11,12.985 8.9849999,15 6.5,15 4.0150001,15 2,12.985 2,10.5 Z" id="path94" /></g></g></svg></span>
+                                
+                                <span class="tech-icon google"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 26"><g transform="matrix(1.1172997,0,0,1.1172997,-1.6759496,-6.7037983)"><g id="g1"><path fill="#fbbc04" d="M 1.5,29 C 1.5,29 16,6 16,6 c 0,0 9,0 9,0 0,0 0,3.1999998 0,3.1999998 C 25,9.1999998 12.5,29 12.5,29" id="path58" /><path fill="#1a73e8" d="m 25,29 c 0,0 -9,0 -9,0 0,0 0,-23 0,-23 0,0 9,0 9,0 0,0 0,23 0,23 z" id="path64" /><path fill="#34a853" d="m 31.5,22.5 c 0,3.59 -2.91,6.5 -6.5,6.5 0,0 0,-13 0,-13 3.59,0 6.5,2.91 6.5,6.5 z" id="path70" /><path fill="#0d652d" d="m 25,29 c -3.59,0 -6.5,-2.91 -6.5,-6.5 0,-3.59 2.91,-6.5 6.5,-6.5 0,0 0,13 0,13 z" id="path76" /><path fill="#1a73e8" d="m 30,11 c 0,2.761 -2.238,5 -5,5 0,0 0,-10 0,-10 2.762,0 5,2.2390001 5,5 z" id="path82" /><path fill="#174ea6" d="m 25,16 c -2.762,0 -5,-2.239 -5,-5 0,-2.7609999 2.238,-5 5,-5 0,0 0,10 0,10 z" id="path88" /><path fill="#ea4335" d="M 2,10.5 C 2,8.0150001 4.0150001,6 6.5,6 8.9849999,6 11,8.0150001 11,10.5 11,12.985 8.9849999,15 6.5,15 4.0150001,15 2,12.985 2,10.5 Z" id="path94" /></g></g></svg></span>
+                                
+                                                        
                             
                             <span class="tech-name">Google Fonts</span>    
+
                         </p><p class="technology">
                             
-                            <span class="tech-icon"><i class="fab fa-js"></i></span>
+                                
+                                <span class="tech-icon"><i class="fab fa-js"></i></span>
+                                
+                                                        
                             
                             <span class="tech-name">JavaScript</span>    
+
                         </p><p class="technology">
                             
-                            <span class="tech-icon"><i class="fab fa-node"></i></span>
+                                
+                                <span class="tech-icon"><i class="fab fa-node"></i></span>
+                                
+                                                        
                             
                             <span class="tech-name">Node.js</span>    
+
                         </p><p class="technology">
                             
-                            <span class="tech-icon express">Express</span>
+                                
+                                <span class="tech-icon express">Express</span>
+                                
+                                                        
                             
                             <span class="tech-name">Express.js</span>    
+
                         </p><p class="technology">
                             
-                            <span class="tech-icon mongo"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><defs><style>.cls-1 {fill: #10aa50;} .cls-2 {fill: #b8c4c2;} .cls-3 {fill: #12924f;} .cls-4 {fill: #21313c;}</style></defs><path class="cls-1" d="M134.44,120.34C119.13,52.8,87.22,34.82,79.08,22.11a144.57,144.57,0,0,1-8.9-17.42c-.43,6-1.22,9.78-6.32,14.33C53.62,28.15,10.13,63.59,6.47,140.33c-3.41,71.55,52.6,115.67,60,120.23,5.69,2.8,12.62.06,16-2.51,27-18.53,63.89-67.93,52-137.71" /><path class="cls-2" d="M72.5,222.46c-1.41,17.71-2.42,28-6,38.12,0,0,2.35,16.86,4,34.72h5.84a324.73,324.73,0,0,1,6.37-37.39C75.15,254.19,72.79,238,72.5,222.46Z" /><path class="cls-3" d="M82.7,257.92h0c-7.64-3.53-9.85-20.06-10.19-35.46a725.83,725.83,0,0,0,1.65-76.35c-.4-13.36.19-123.74-3.29-139.9A134.29,134.29,0,0,0,79.08,22.1c8.14,12.72,40.06,30.7,55.36,98.24C146.36,190,109.67,239.27,82.7,257.92Z" /></svg></span>
+                                
+                                <span class="tech-icon mongo"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><defs><style>.cls-1 {fill: #10aa50;} .cls-2 {fill: #b8c4c2;} .cls-3 {fill: #12924f;} .cls-4 {fill: #21313c;}</style></defs><path class="cls-1" d="M134.44,120.34C119.13,52.8,87.22,34.82,79.08,22.11a144.57,144.57,0,0,1-8.9-17.42c-.43,6-1.22,9.78-6.32,14.33C53.62,28.15,10.13,63.59,6.47,140.33c-3.41,71.55,52.6,115.67,60,120.23,5.69,2.8,12.62.06,16-2.51,27-18.53,63.89-67.93,52-137.71" /><path class="cls-2" d="M72.5,222.46c-1.41,17.71-2.42,28-6,38.12,0,0,2.35,16.86,4,34.72h5.84a324.73,324.73,0,0,1,6.37-37.39C75.15,254.19,72.79,238,72.5,222.46Z" /><path class="cls-3" d="M82.7,257.92h0c-7.64-3.53-9.85-20.06-10.19-35.46a725.83,725.83,0,0,0,1.65-76.35c-.4-13.36.19-123.74-3.29-139.9A134.29,134.29,0,0,0,79.08,22.1c8.14,12.72,40.06,30.7,55.36,98.24C146.36,190,109.67,239.27,82.7,257.92Z" /></svg></span>
+                                
+                                                        
                             
                             <span class="tech-name">MongoDB</span>    
+
                         </p><p class="technology">
                             
-                            <span class="tech-icon"><i class="fab fa-react"></i></span>
+                                
+                                <span class="tech-icon"><i class="fab fa-react"></i></span>
+                                
+                                                        
                             
                             <span class="tech-name">React.js</span>    
+
                         </p><ul class="sub-tech"><li>
-                                Context API
-                            </li><li>
-                                Hooks
-                            </li><li>
                                 React Router
                             </li><li>
-                                Styled Components
-                            </li></ul></div>
+                                React Hooks
+                            </li><li>
+                                Context API
+                            </li></ul><p class="technology">
+                            
+                            <span class="tech-image">
+                                <img src="/images/responsive-design.svg" alt="">
+                            </span>
+                                                        
+                            
+                            <span class="tech-name">Responsive Design</span>    
+
+                        </p></div>
                     <div class="description">
                         <h5 class="desc-title">Project Description</h5>
                         <p class="desc-text">
@@ -209,7 +258,7 @@
             <a class="btn left" href="/projects/project4">Previous project</a>
         </li>
         <li>
-            <a class="btn right" href="/projects/project1">Next project</a>
+            <a class="btn right" href="/projects/project6">Next project</a>
         </li>
     </ul>
 </nav></main>
