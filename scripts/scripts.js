@@ -59,20 +59,26 @@ $(document).ready(function () {
     }
 
     // owl script
-    $('.carousel').owlCarousel({
+
+    const carouselOptions = {
         margin: 20,
         center: true,
-        loop: ($('.owl-carousel .items').length >= 3),
-        // loop: true,
         autoplay: true,
-        autoplayTimeout: 2000,
+        autoplayTimeout: 5000,
         autoplayHoverPause: true,
+        loop: true,
+    }
+    
+    $('.carousel-index').owlCarousel({
+        ...carouselOptions,
+        // loop: (Object.keys($('.carousel-index').children()).length - 2 > 3),
+        // loop: true,
         responsive: {
             0: {
                 items: 1,
                 nav: false
             },
-            768: {
+            500: {
                 items: 2,
                 nav: false
             },
@@ -81,5 +87,14 @@ $(document).ready(function () {
                 nav: false
             }
         }
+    });
+    
+    $('.carousel-project').owlCarousel({
+        ...carouselOptions,
+        autoHeight: true,
+        nav: true,
+        items: 1,
+        loop: true,
+        navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>']
     });
 });
