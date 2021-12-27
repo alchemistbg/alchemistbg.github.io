@@ -38,6 +38,67 @@ $(document).ready(function () {
         $('.hamburger-item').toggleClass('active');
     });
 
+    $('#contacts-form').change(function (event) { 
+        event.preventDefault();
+        
+        if ((event.target.type === 'text' || event.target.type === 'email' || event.target.type === 'textarea') && event.target.value.length > 0) {
+            $(event.target).addClass('filled');
+        } else {
+            $(event.target).removeClass('filled');
+        }
+    });
+
+    // $('#contacts-form').disableAutoFill();
+    // $('#contacts-form').validate({
+    //     rules: {
+    //         name: "required",
+    //         email: {required: true, email: true},
+    //         subject: "required",
+    //         message: "required"
+    //     },
+    //     messages: {
+    //         name: "Please enter your name!",
+    //         email: "Please enter a valid email address!",
+    //         subject: "Please enter a subject!",
+            
+    //     },
+
+    //     invalidHandler: function (event, validator) {
+    //         alert(validator.valid());
+    //         //if(validator.valid()) show your modal then use validator.errors() to show custom errors
+    //     },
+
+    //     submitHandler: function (form) {
+    //         if ($('#contacts-form').is(':checked')) {
+    //             if ($('#webform').val().length != 0) {
+    //                 alert("YOU FUCKING SPAMMER!")
+    //                 return;
+    //             } else {
+    //                 console.log("HI")
+    //                 alert("Form submitted");
+    //                 form.submit();
+    //             }
+    //         }
+    //     }
+    // });
+    
+    $('#contacts-form').submit(function (event) {
+        event.preventDefault();
+        if ($('#webform').val().length != 0) {
+            alert("YOU NASTY SPAMMER!")
+            event.preventDefault();
+            // return false;
+        } else {
+            let $inputs = $('#contacts-form input, #contacts-form:not(input[type="submit"]), #contacts-form textarea');
+            $inputs.each(function(){
+                console.log($(this)[0].value)
+            });
+            alert("Form submitted")
+            event.preventDefault();
+            // console.log(event);
+        }
+    });
+
     if ($('.typing-1-items').length) {
         const typing1items = $(".typing-1-items").text();
         const typed1 = new Typed(".typing-1", {
