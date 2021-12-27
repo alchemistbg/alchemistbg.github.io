@@ -1,0 +1,78 @@
+<section class="project-details">
+    <div class="container">
+        <header>
+            <h2 class="title">My Projects</h2>
+        </header>
+        <main>
+            {%- include projectNavigation.html location="top"-%}
+            <h3 class='project-title'>{{page.title}}</h3>
+            <div class="project-content">
+                <div class="column left">
+                    <div class="url">
+                        <h5 class="url-title">Project Demo</h5>
+                        <a href="{{page.projectUrlFull}}" target="_blank" class='url-link'>{{page.projectUrlShort}}</a>
+                    </div>
+                    <div class="technologies">
+                        <h5 class="tech-title">Used Technologies</h5>
+                        {%- for tech in page.technologies -%}
+                        <p class="technology">
+                            {% if tech.techImage %}
+                            <span class="tech-image">
+                                <img src="/images/{{tech.techImage}}" alt="">
+                            </span>
+                            {% else %}
+                                {% if tech.techIconClass %}
+                                <span class="tech-icon {{tech.techIconClass}}">{{tech.techIcon}}</span>
+                                {% else %}
+                                <span class="tech-icon">{{tech.techIcon}}</span>
+                                {% endif %}
+                            {% endif %}                            
+                            
+                            <span class="tech-name">{{tech.techName}}</span>    
+
+                        </p>
+                        {%- if tech.techSubTech -%}
+                        <ul class="sub-tech">
+                            {%- assign techSubTech = tech.techSubTech | split: ", " -%}
+                            {%- for subTech in techSubTech -%}
+                            <li>
+                                {{subTech}}
+                            </li>
+                            {%- endfor -%}
+                        </ul>
+                        {%- endif -%}
+                        {%- endfor -%}
+                    </div>
+                    <div class="description">
+                        <h5 class="desc-title">Project Description</h5>
+                        <p class="desc-text">
+                            {{page.description}}
+                        </p>
+                    </div>
+                    <div class="disclaimer">
+                        <h6 class="disc-title">Disclaimer</h6>
+                        <p class="disc-text">
+                            All trademarks, logos and brand names are the property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, trademarks and brands does not imply any relationship, sponsorship, or endorsement.
+                        </p>
+                    </div>
+                </div>
+                <div class="column right">
+                    <h5 class="gallery-title">Project Screenshots</h5>
+                    <div class="carousel-project owl-carousel">
+                        {% assign images = page.images | split: ", " %}
+                        {% assign imagesDesc = page.imagesDesc | split: ", " %}
+                        {%- for image in images -%}
+                        {% assign index = forloop.index0%}
+                        <div class=img-container>
+                            <p class='img-desc'>{{ imagesDesc[index] }}</p>
+                            <img src="{{site.baseUrl}}/images/{{image}}.jpg" alt="">
+                        </div>
+                        {%- endfor -%}
+                    </div>
+                    
+                </div>
+            </div>
+            {%- include projectNavigation.html location="bottom"-%}
+        </main>
+    </div>
+</section>

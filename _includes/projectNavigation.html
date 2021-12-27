@@ -1,0 +1,19 @@
+<nav class="projects-nav {{include.location}}">
+    <ul>
+        {%- assign projectsLength = site.projects | size -%}
+        <li>
+            <a class="btn left" href="/projects/project{%- if page.projectNumber < 2 -%}
+                {{site.projects | size}}
+                {%- else -%}
+                    {{page.projectNumber | minus: 1}}
+                {%- endif -%}">Previous project</a>
+        </li>
+        <li>
+            <a class="btn right" href="/projects/project{%- if page.projectNumber == projectsLength -%}
+                1
+                {%- else -%}
+                {{page.projectNumber | plus: 1}}
+                {%- endif -%}">Next project</a>
+        </li>
+    </ul>
+</nav>
