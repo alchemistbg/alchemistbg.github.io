@@ -621,7 +621,7 @@ section {
     justify-content: space-between; }
     .skills .skills-content .bottom .lang-skills .info span:nth-child(2) {
       font-weight: 600; }
-  .skills .skills-content .bottom .lang-skills .legend-bullet {
+  .skills .skills-content .bottom .lang-skills .legend-bullet--top {
     font-size: 0.8em;
     color: #c00f0f;
     position: absolute;
