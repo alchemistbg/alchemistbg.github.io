@@ -7,10 +7,8 @@ $column-width: calc(50% - 2em);
 
 // Font variables
 $font-awesome: 'Font Awesome 5 Free';
-$font-family-header: 'Ubuntu',
-sans-serif;
-$font-family-text: 'Poppins',
-sans-serif;
+$font-family-header: 'Ubuntu', sans-serif;
+$font-family-text: 'Poppins', sans-serif;
 $font-lineHeight: 1.5;
 
 $font-weight-normal: 400;
@@ -31,8 +29,10 @@ $color-lightBlue: rgb(100, 175, 175);
 $color-darkBlue: rgb(1, 37, 74);
 
 $color-red: rgb(192, 15, 15);
+$color-red-alpha: rgba(192, 15, 15, 0.5);
 $color-black: rgb(0, 0, 0);
 $color-medium-black:rgb(32, 32, 32);
+$color-medium2-black:rgb(64, 64, 64);
 $color-light2-black: rgb(128, 128, 128);
 $color-light-black: rgb(160, 160, 160);
 
