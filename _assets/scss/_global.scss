@@ -2,6 +2,10 @@ html {
     scroll-behavior: smooth;
 }
 
+main {
+    min-height: calc(100vh - 4em);
+}
+
 section {
     padding: 7em 0;
 
@@ -21,7 +25,7 @@ section {
             left: 50%;
             width: 14rem;
             height: 0.3rem;
-            background: $color-black-light;
+            background: $color-medium-black;
             transform: translate(-50%);
         }
 
@@ -41,30 +45,36 @@ section {
 
 .container {
     max-width: $content-width;
-    padding: 0 5em;
     margin: auto;
 
     @media(max-width: 1024px) {
-        padding: 0 3em;
-        max-width: 80vw;
+        max-width: $content-width-medium;
     }
 
     @media(max-width: 768px) {
-        // padding: 0 3em;
-        max-width: 95vw;
+        max-width: $content-width-small;
     }
 
 }
 
 .about .about-content,
 .skills .skills-content-summary,
-.skills .skills-content {
+.skills .skills-content,
+// .project-details .project-content,
+.contacts .contacts-content {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-between;
 
     @media(max-width: 768px) {
         display: block;
+    }
+
+    .column {
+        width: $column-width;
+
+        @media(max-width: 768px) {
+            width: 100%;
+        }
     }
 }
