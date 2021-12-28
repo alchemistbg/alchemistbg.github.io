@@ -9,30 +9,54 @@
     font-family: $font-family-header;
 
     .container {
-        margin: auto 0 auto 4em;
-    }
+        width: $content-width;
 
-    .home-content {
-        .text-1 {
-            font-size: 2em;
-        }
-
-        .text-2 {
-            font-size: 6em;
-            font-weight: $font-weight-semiBold;
-        }
-
-        .text-3 {
-            font-size: 3em;
-
-            .typing-1-items {
-                display: none;
+        .home-content {
+            .text-1 {
+                font-size: 2em;
             }
 
-            .typing-1 {
-                color: $color-red;
-                font-weight: $font-weight-medium;
+            .text-2 {
+                font-size: 6em;
+                font-weight: $font-weight-semiBold;
+
             }
+
+            .text-3 {
+                font-size: 3em;
+
+                .typing-1-items {
+                    display: none;
+                }
+
+                .typing-1 {
+                    color: $color-red;
+                    font-weight: $font-weight-medium;
+                }
+            }
+
+            @media(max-width: 450px) {
+                .text-1 {
+                    font-size: 1.5em;
+                }
+
+                .text-2 {
+                    font-size: 4em;
+                }
+
+                .text-3 {
+                    font-size: 2em;
+                }
+            }
+        }
+
+
+        @media(max-width: 1024px) {
+            width: $content-width-medium;
+        }
+
+        @media(max-width: 768px) {
+            width: $content-width-small;
         }
     }
 }
