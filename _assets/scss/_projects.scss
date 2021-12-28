@@ -11,9 +11,7 @@
         background: $color-black;
     }
 
-    .carousel {
-        // display: flex;
-
+    .carousel-index {
         .card {
             background-color: $color-medium-black;
             border-radius: $border-radius;
@@ -56,12 +54,13 @@
                 width: 10em;
                 height: 10em;
                 object-fit: cover;
-                border: 2px solid $color-red;
+                border-radius: $border-radius;
+                outline: 2px solid $color-red;
                 transition: $transition-all;
             }
 
             .project-title {
-                color: $color-white;
+                color: $color-red;
                 font-weight: $font-weight-medium;
                 margin: 1em 0 0.7em 0;
             }
@@ -101,32 +100,42 @@
                 cursor: pointer;
             }
         }
-    }
 
-    .owl-dots {
-        text-align: center;
-        margin: 1em 0em 2em 0;
+        .owl-item.center {
+            border: 2px solid $color-red;
+            // border: 2px solid $color-white;
+            border-radius: $border-radius;
 
-    }
+            @media(max-width: 500px) {
+                border: none;
+            }
+        }
 
-    .owl-dot {
-        width: 13px;
-        height: 13px;
-        margin: 0 5px;
-        outline: none !important;
-        border-radius: 50%;
-        border: 2px solid crimson !important;
-        transition: all 0.3s ease;
-    }
+        .owl-dots {
+            text-align: center;
+            margin: 1em 0em 2em 0;
 
-    .owl-dot.active {
-        width: 35px;
-        border-radius: 14px;
-    }
+        }
 
-    .owl-dot.active,
-    .owl-dot:hover {
-        background-color: crimson !important;
+        .owl-dot {
+            width: 13px;
+            height: 13px;
+            margin: 0 5px;
+            outline: none !important;
+            border-radius: 50%;
+            border: 2px solid crimson !important;
+            transition: all 0.3s ease;
+        }
+
+        .owl-dot.active {
+            width: 35px;
+            border-radius: 14px;
+        }
+
+        .owl-dot.active,
+        .owl-dot:hover {
+            background-color: crimson !important;
+        }
     }
 
     .btn {
@@ -135,52 +144,210 @@
 }
 
 .project-details {
+    @at-root section#{&} {
+        padding-bottom: 3em;
+    }
+
+    .projects-nav {
+        &.top {
+            margin-bottom: 2em;
+        }
+
+        &.bottom {
+            margin-top: 2em;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+
+            .btn {
+                padding: 0.2em 0.5em;
+                font-size: 1em;
+
+                &.left:before,
+                &.right:after {
+                    font-family: $font-awesome;
+                }
+
+                &.left:before {
+                    content: '\f100';
+                    padding-right: 0.5em;
+                }
+
+                &.right:after {
+                    content: '\f101';
+                    padding-left: 0.5em;
+                }
+            }
+        }
+    }
+
+    .project-title {}
+
+    .project-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: 0.5em;
+
+        @media(max-width: 768px) {
+            .left {
+                order: 2
+            }
+
+            .right {
+                order: 1
+            }
+        }
+    }
+
+
     .column {
         width: $column-width;
+        // border: 2px solid red;
 
         @media(max-width: 768px) {
             width: 100%;
         }
-
     }
 
-    img {
-        width: 100%;
-    }
+    .left {
+        div {
+            margin-bottom: 2em;
+        }
 
-    .technology {
-        display: flex;
-        align-items: baseline;
-        align-items: center;
-        
-        .tech-icon {
-            width: 1.5em;
-            font-size: 1.5em;
-            color: $color-red;
-            // text-align: center;
-            position: relative;
-            
-            &.jquery{
-                // padding-left: 1em;
-            }
-            
-            svg {
-                width: 0.9em;
-                height: auto;
-                fill: $color-white;
-                background: $color-red;
-                // position: absolute;
-                // left: 0.2em;
-                // bottom: -0.2em;
+        .url {
+            .url-link {
+                color: $color-red;
+                font-weight: $font-weight-medium;
             }
         }
 
-        .tech-name {}
+        .technology {
+            display: flex;
+            // align-items: baseline;
+            align-items: center;
+
+            .tech-icon {
+                min-width: 1.5em;
+                font-size: 1.5em;
+                text-align: center;
+                color: $color-red;
+
+                svg {
+                    width: 0.9em;
+                    height: auto;
+                }
+
+                &.jquery svg {
+                    fill: $color-white;
+                    background: $color-red;
+                }
+
+                &.google svg {
+                    path {
+                    }
+                }
+
+                &.express {
+                    font-size: 0.5em;
+                    font-weight: bold;
+                    min-width: 4.5em;
+                }
+
+                &.mongo {
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+
+            .tech-image {
+                width: 1.5em;
+                font-size: 1.5em;
+                
+                img{
+                    width: 100%;
+                    height: 100%;
+                };
+            }
+
+            .tech-name {
+                font-size: 1.2em;
+                font-weight: $font-weight-medium;
+                margin-left: 0.5em;
+            }
+        }
+
+        .sub-tech {
+            padding-left: 3em;
+            color: $color-medium2-black;
+        }
+
+        .description {}
     }
 
+    .right {
+        .gallery-title {}
 
-    .tech-name {
-        font-size: 1.2em;
-        font-weight: $font-weight-medium;
+        .carousel-project {
+            // background-color: red;
+            width: 90%;
+            margin: 0 auto;
+            position: relative;
+
+            .img-container {
+                // position: relative;
+
+                .img-desc {
+                    // position: absolute;
+                    // display: none;
+                    color: $color-red;
+                    font-weight: $font-weight-medium;
+                    margin-bottom: 0.5em;
+                }
+
+                // &:hover{
+                //     .img-desc{
+                //         display: block;
+                //         color: $color-red;
+                //         background-color: $color-white-alpha;
+                //     }
+                // }
+
+                img {}
+            }
+
+            .owl-prev,
+            .owl-next {
+                position: absolute;
+                top: 5em;
+                // width: 15px;
+                // height: 100%;
+                // transform: translateY(-50%);
+                // display: block !important;
+                // border: 0px solid black;
+
+            }
+
+            .owl-prev {
+                left: -1.7em;
+            }
+
+            .owl-next {
+                right: -1.7em;
+            }
+
+            .owl-prev i,
+            .owl-next i {
+                font-size: 3em;
+                color: $color-red-alpha;
+                transition: color 0.2s ease;
+
+                &:hover {
+                    color: $color-red;
+                }
+            }
+        }
     }
 }
