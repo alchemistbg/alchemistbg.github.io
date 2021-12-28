@@ -9,9 +9,9 @@
         // display: flex;
         // justify-content: space-between;
 
-        .column {
-            width: $column-width;
-        }
+        // .column {
+        //     width: $column-width;
+        // }
 
         .right-summary,
         .left,
@@ -89,7 +89,7 @@
 
             a {
                 display: inline-block;
-                font-weight: 600;
+                // font-weight: 600;
                 margin-top: 1em;
             }
         }
@@ -179,17 +179,40 @@
             }
 
             .lang-skills {
-
+                h4{
+                    position: relative;
+                }
+                
                 .info {
                     margin-bottom: 0.3em;
-                }
-
-                .info {
                     display: flex;
                     justify-content: space-between;
 
                     span:nth-child(2) {
                         font-weight: $font-weight-semiBold;
+                    }
+                }
+
+                .legend-bullet--top{
+                    font-size: 0.8em;
+                    color: $color-red;
+                    position: absolute;
+                    padding-left: 0.2em;
+                }
+                
+                .legend-bullet--bottom{
+                    // font-size: 0.8rem;
+                }
+
+                .legend-info {
+                    font-size: 0.8em;
+                    text-align: right;
+                    border-top: 2px solid $color-red;
+                    margin-top: 1em;
+
+                    a{
+                        color: $color-red;
+                        font-weight: bold;
                     }
                 }
             }
@@ -202,11 +225,6 @@
             .left-summary a {
                 margin-bottom: 2em;
             }
-        }
-
-        .skills-content-summary .column,
-        .skills-content .column {
-            width: 100%;
         }
 
         .skills-content .bottom {
