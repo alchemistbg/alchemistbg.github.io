@@ -96,22 +96,22 @@ $(document).ready(function () {
     //     }
     // });
     
-    $('#contacts-form').submit(function (event) {
-        event.preventDefault();
-        if ($('#webform').val().length != 0) {
-            alert("YOU NASTY SPAMMER!")
-            event.preventDefault();
-            // return false;
-        } else {
-            let $inputs = $('#contacts-form input, #contacts-form:not(input[type="submit"]), #contacts-form textarea');
-            $inputs.each(function(){
-                console.log($(this)[0].value)
-            });
-            alert("Form submitted")
-            event.preventDefault();
-            // console.log(event);
-        }
-    });
+    // $('#contacts-form').submit(function (event) {
+        // event.preventDefault();
+        // if ($('#webform').val().length != 0) {
+        //     alert("YOU NASTY SPAMMER!")
+        //     event.preventDefault();
+        //     // return false;
+        // } else {
+        //     let $inputs = $('#contacts-form input, #contacts-form:not(input[type="submit"]), #contacts-form textarea');
+        //     $inputs.each(function(){
+        //         console.log($(this)[0].value)
+        //     });
+        //     alert("Form submitted")
+        //     event.preventDefault();
+        //     // console.log(event);
+        // }
+    // });
 
     if ($('.typing-1-items').length) {
         const typing1items = $(".typing-1-items").text();
