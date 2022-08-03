@@ -1,3 +1,9 @@
+.projects-carousel, .project-details {
+    .title:after {
+        content: "what i've done";
+    }
+}
+
 .projects-carousel {
     color: $color-white;
     background: $color-black;
@@ -7,7 +13,6 @@
     }
 
     .title:after {
-        content: "what i've done";
         background: $color-black;
     }
 
@@ -162,7 +167,7 @@
             justify-content: space-between;
 
             .btn {
-                padding: 0.2em 0.5em;
+                padding: 0.5em 0.8em;
                 font-size: 1em;
 
                 &.left:before,
@@ -246,8 +251,7 @@
                 }
 
                 &.google svg {
-                    path {
-                    }
+                    path {}
                 }
 
                 &.express {
@@ -265,11 +269,13 @@
             .tech-image {
                 width: 1.5em;
                 font-size: 1.5em;
-                
-                img{
+
+                img {
                     width: 100%;
                     height: 100%;
-                };
+                }
+
+                ;
             }
 
             .tech-name {

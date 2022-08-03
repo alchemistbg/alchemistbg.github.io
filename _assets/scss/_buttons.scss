@@ -15,11 +15,11 @@
         color: $color-red;
     }
 
-    &:disabled{
+    &:disabled {
         cursor: not-allowed;
         background-color: $color-red-alpha;
-        
-        &:hover{
+
+        &:hover {
             cursor: not-allowed !important;
             background-color: $color-red-alpha;
             color: $color-white;
@@ -45,7 +45,7 @@
             background: $color-red;
             color: $color-white;
         }
-        
+
         &.show {
             pointer-events: auto;
             opacity: 1;

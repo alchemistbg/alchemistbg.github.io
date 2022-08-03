@@ -29,8 +29,7 @@
             font-weight: $font-weight-semiBold;
             color: $color-white;
 
-            span {
-                color: $color-red;
+            .special-format {
                 transition: $transition-all;
             }
         }

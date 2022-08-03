@@ -70,11 +70,28 @@ section {
         display: block;
     }
 
+
     .column {
         width: $column-width;
 
         @media(max-width: 768px) {
+            // width: 100%;
+
+            width: 75%;
+            margin: auto;
+            // &.left {
+            // }
+        }
+
+        @media(max-width: 600px) {
             width: 100%;
+
+            &.left {
+            }
         }
     }
+}
+
+.special-format{
+    color: $color-red;
 }
